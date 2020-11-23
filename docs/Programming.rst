@@ -119,7 +119,7 @@ Functions are described in the following way. It follows the standard way of doc
 
 .. code:: php
 
- $findVariablePartner('varname', $round = $currentRound, $partnerRole = null, $no_decision = null);
+ $findVariablePartner('varname',  $roundselected = $round, $partnerRole = null, $no_decision = null);
 
 
 Function name
@@ -179,7 +179,7 @@ Pre-Defined Variables
 name  			value
 ====================  	=====
 :php:`$lang`       	Current language (0: German, 1: English, 2: Spanish)
-:php:`$round`      	Current round
+:php:`$roundselected`      Current round
 :php:`$id`         	Participant ID (unique in all games, decisions are stored with the participant ID)
 :php:`$subject`    	Subject ID (unique in game, starts from 1,...)
 :php:`$role`       	Role ID (if set)
@@ -200,7 +200,7 @@ Functions to retrieve variables
 The following functions can be used to retrieve subjects variables. 
 
 
-:php:`$findVariablePartner('varname', $round = $currentRound, $partnerRole = null, $no_decision = null);`
+:php:`$findVariablePartner('varname',  $roundselected = $round, $partnerRole = null, $no_decision = null);`
 
 	**Function** retrieves the variable from another participant in the same group. The function makes sure that participants always get feedback, which can be important in order to avoid disappointing participants. Certainly, cloned or random observations may have to be deleted prior to using data for research. 
 
@@ -211,7 +211,7 @@ The following functions can be used to retrieve subjects variables.
 	**Arguments** are:
 
 	-  :php:`varname` the variable name (mandatory). The function can retrieve subjects variables which were saved before or which were decision inputs.
-	-  :php:`$round` the round from which the variable should be retrieved. 
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
 	-  :php:`$partnerRole` the role of the partner can be specified. E.g. in a group of 3 participants (role 1, role 2 and role 3), it is necessary to specify from which partner to take the variable from. 
 	-  :php:`$no_decision` can be used to provide random values in case no decision was made. 
 
@@ -219,7 +219,7 @@ The following functions can be used to retrieve subjects variables.
 
 ----
 
-:php:`$findGroupAverage('varname', $round = $currentRound, $includingOwn = false)`
+:php:`$findGroupAverage('varname',  $roundselected = $round, $includingOwn = false)`
 
 	**Function** retrieves the average of a variable for the own group. 
 
@@ -228,13 +228,13 @@ The following functions can be used to retrieve subjects variables.
 	**Arguments** are:
 
 	-  :php:`varname` the variable name (mandatory). The function can retrieve subjects variables which were saved before or which were decision inputs.
-	-  :php:`$round` the round from which the variable should be retrieved. 
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
 	-  :php:`$includingOwn` specifies if the own value should be included or not. :php:`$includingOwn = true` means the own value will be included.
 	
 
 ----
 
-:php:`$findGroupSum('varname', $round = $currentRound, $includingOwn = false)`
+:php:`$findGroupSum('varname',  $roundselected = $round, $includingOwn = false)`
 
 	**Function** retrieves the sum of a variable for the own group. 
 
@@ -243,13 +243,13 @@ The following functions can be used to retrieve subjects variables.
 	**Arguments** are:
 
 	-  :php:`varname` the variable name (mandatory). The function can retrieve subjects variables which were saved before or which were decision inputs.
-	-  :php:`$round` the round from which the variable should be retrieved. 
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
 	-  :php:`$includingOwn` specifies if the own value should be included or not.
 	
 
 ----
 
-:php:`$findGroupFreq('varname', $round = $currentRound, $includingOwn = false)`
+:php:`$findGroupFreq('varname',  $roundselected = $round, $includingOwn = false)`
 
 	**Function** retrieves the frequency of each value of a variable for the own group. 
 
@@ -258,13 +258,13 @@ The following functions can be used to retrieve subjects variables.
 	**Arguments** are:
 
 	-  :php:`varname` the variable name (mandatory). The function can retrieve subjects variables which were saved before or which were decision inputs.
-	-  :php:`$round` the round from which the variable should be retrieved. 
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
 	-  :php:`$includingOwn` specifies if the own value should be included or not.
 	
 
 ----
 
-:php:`$findSold($round = $currentRound)`
+:php:`$findSold($roundselected = $round)`
 
 	**Function** retrieves the number of items sold (in a contract element).
 
@@ -272,29 +272,29 @@ The following functions can be used to retrieve subjects variables.
 
 	**Arguments** are:
 
-	-  :php:`$round` the round from which the variable should be retrieved. 
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
 	
 ----
 
-:php:`$findBought($round = $currentRound)`
+:php:`$findBought($roundselected = $round)`
 
 	**Function** retrieves the number of items bought (in a contract element). The logic is exactly the same as in :php:`$findSold(...);`
 
 ----
 
 
-:php:`$findSoldTo($round = $currentRound)`
+:php:`$findSoldTo($roundselected = $round)`
 
 	**Function** finds the IDs of the trading partners who bought something in a round.
 
 	**Returns** an array with the unit numbers of the bought goods as index and the	IDs of the trading partners that bought the items.
 
-	-  :php:`$round` the round from which the variable should be retrieved.
+	-  :php:`$roundselected` the round from which the variable should be retrieved.
 
 ----
 
 
-:php:`$findBoughtFrom($round = $currentRound)`
+:php:`$findBoughtFrom($roundselected = $round)`
 
 	**Function** finds the IDs of the trading partners who sold something in a round. The logic is exactly the same as in :php:`$findSoldTo(...);`
 
@@ -334,7 +334,7 @@ Function to save variables
 
 If you want to retrieve variables, those variables have to be stored before. For decision inputs this happens automatically. If you want to retrieve variables defined or used in the subjects program, you have to save them before by using the following function:
 
-:php:`$save('varname', $value, $round = $currentRound);`
+:php:`$save('varname', $value, $roundselected = $round);`
 
 	**Function** stores a value in the subjects table.
 
@@ -344,7 +344,7 @@ If you want to retrieve variables, those variables have to be stored before. For
 
 	-  :php:`'varname'` the variable name (mandatory).
 	-  :php:`$value` the value to be stored. The value can also be a variable itself.
-	-  :php:`$round` the values are saved for a certain round. If you e.g. calculate a result in round 6 according to inputs made in round 5, you can enter $round = $currentRound-1 in order to save the result in the round it belongs to.
+	-  :php:`$roundselected` the values are saved for a certain round. If you e.g. calculate a result in round 6 according to inputs made in round 5, you can enter $round = $currentRound-1 in order to save the result in the round it belongs to.
 	
 
 Here you can find some coding examples:
@@ -356,7 +356,7 @@ Here you can find some coding examples:
 
 	/* store the value 7 as variable "test" in the previous round */
 	$a = 7;
-	$save("test", $a, $round=$currentRound-1);
+	$save("test", $a, $roundselected = $round-1);
 
 .. note:: Keep in mind that you should only retrieve variables at least one stage after saving them. See `Synchronization`_.
 
@@ -387,7 +387,7 @@ Pre-defined variables
 name                 value
 ==================== ============
 :php:`$lang`          Actual Language (0: German, 1: English, 2: Spanish)
-:php:`$currentRound`  Current Round
+:php:`$roundselected`  Current Round
 :php:`$maxWin`		  Maximal amount for real payoff, default is 100.
 ==================== ============
 
@@ -400,7 +400,7 @@ Functions
 
 The following functions can be used to retrieve globals variables. 
 
-:php:`$getValues('varname', $round = $currentRound)`
+:php:`$getValues('varname', $roundselected = $currentRound)`
 
 	**Function** retrieves the values of one variable for all participants.
 
@@ -409,13 +409,13 @@ The following functions can be used to retrieve globals variables.
 	**Arguments** are:
 
 	-  :php:`varname` the variable name (mandatory). The function can retrieve subjects variables which were saved before or which were decision inputs. 
-	-  :php:`$round` the round from which the variable should be retrieved.
+	-  :php:`$roundselected` the round from which the variable should be retrieved.
 	
 .. note:: The function can only retrieve subjects variables which were saved before or which were decision inputs. Predefined variables (like role, group and treatment) can not be retrieved with this function. For these functions use :php:`getRoles()`, :php:`getTreatments()`,... (see below).
 
 ----
 
-:php:`$getTimes('varname', $round = $currentRound)`
+:php:`$getTimes('varname', $roundselected = $currentRound)`
 
 	**Function** retrieves the time participants need for a decision concerning a certain variable in seconds.
 
@@ -424,11 +424,11 @@ The following functions can be used to retrieve globals variables.
 	**Arguments** are:
 
 	-  :php:`varname` the variable name (mandatory). The function can retrieve subjects variables which were saved before or which were decision inputs.
-	-  :php:`$round` the round from which the variable should be retrieved.
+	-  :php:`$roundselected` the round from which the variable should be retrieved.
 
 ----
 
-:php:`$getFreq('varname', $round = $currentRound, $multiple = false)`
+:php:`$getFreq('varname', $roundselected = $currentRound, $multiple = false)`
 
 	**Function** retrieves the frequencies of values over all participants for one variable.
 
@@ -437,12 +437,12 @@ The following functions can be used to retrieve globals variables.
 	**Arguments** are:
 
 	-  :php:`varname` the variable name (mandatory). The function can retrieve subjects variables which were saved before or which were decision inputs.
-	-  :php:`$round` the round from which the variable should be retrieved. 
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
 	-  :php:`$multiple` If multiple is set to true, answers from multiple choice questions are decomposed into single answers.
 
 ----
 
-:php:`$getAverage('varname', $round = $currentRound)`
+:php:`$getAverage('varname', $roundselected = $currentRound)`
 
 	**Function** retrieves the average value of a variable over all participants.
 
@@ -451,11 +451,11 @@ The following functions can be used to retrieve globals variables.
 	**Arguments** are:
 
 	-  :php:`varname` the variable name (mandatory). The function can retrieve subjects variables which were saved before or which were decision inputs.
-	-  :php:`$round` the round from which the variable should be retrieved. 
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
 
 ----
 
-:php:`$getMedian('varname', $round = $currentRound)`
+:php:`$getMedian('varname', $roundselected = $currentRound)`
 
 	**Function** retrieves the median value of a variable over all participants.
 
@@ -464,11 +464,11 @@ The following functions can be used to retrieve globals variables.
 	**Arguments** are:
 
 	-  :php:`varname` the variable name (mandatory). The function can retrieve subjects variables which were saved before or which were decision inputs.
-	-  :php:`$round` the round from which the variable should be retrieved. 
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
 
 ----
 
-:php:`$getAveragePerRole('varname', $round = $currentRound)`
+:php:`$getAveragePerRole('varname', $roundselected = $currentRound)`
 
 	**Function** retrieves the average of a variable over all participants grouped by their role.
 
@@ -477,11 +477,11 @@ The following functions can be used to retrieve globals variables.
 	**Arguments** are:
 
 	-  :php:`varname` the variable name (mandatory). The function can retrieve subjects variables which were saved before or which were decision inputs.
-	-  :php:`$round` the round from which the variable should be retrieved. 
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
 
 ----
 
-:php:`$getAveragePerTreatment('varname', $round = $currentRound)`
+:php:`$getAveragePerTreatment('varname', $roundselected = $currentRound)`
 	
 	**Function** retrieves the average of a variable over all participants grouped by treatment. The logic is the same as for :php:`$getAveragePerRole(...)`. 
 
@@ -489,7 +489,7 @@ The following functions can be used to retrieve globals variables.
 
 ----
 
-:php:`$getAveragePerGroup('varname', $round = $currentRound)`
+:php:`$getAveragePerGroup('varname', $roundselected = $currentRound)`
 
 	**Function** retrieves the average of a variable over all participants grouped by group. The logic is the same as for :php:`$getAveragePerRole(...)`. 
 
@@ -497,7 +497,7 @@ The following functions can be used to retrieve globals variables.
 
 ----
 
-:php:`$getValuesPerGroup('varname', $round = $currentRound)`
+:php:`$getValuesPerGroup('varname', $roundselected = $currentRound)`
 
 	**Function** retrieves the values of a variable for all participants arranged by groups.
 
@@ -506,11 +506,11 @@ The following functions can be used to retrieve globals variables.
 	**Arguments** are:
 
 	-  :php:`varname` the variable name (mandatory). The function can retrieve subjects variables which were saved before or which were decision inputs.
-	-  :php:`$round` the round from which the variable should be retrieved. 
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
 
 ----
 
-:php:`$getVarSum('varname', $round = $currentRound)`
+:php:`$getVarSum('varname', $roundselected = $currentRound)`
 
 	**Function** retrieves the sum of values of a variable over all participants.
 
@@ -519,13 +519,13 @@ The following functions can be used to retrieve globals variables.
 	**Arguments** are:
 
 	-  :php:`varname` the variable name (mandatory). The function can retrieve subjects variables which were saved before or which were decision inputs.
-	-  :php:`$round` the round from which the variable should be retrieved. 
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
 
 	**Also available** as :php:`$getVarSumPerGroup(...)`, :php:`$getVarSumPerTreatment(...)` or :php:`$getVarSumPerRole(...)` following the same logic as described above for :php:`$getAveragePerRole(...)`.
 
 ----
 
-:php:`$getMin('varname', $round = $currentRound)`
+:php:`$getMin('varname', $roundselected = $currentRound)`
 
 	**Function** retrieves the minimum of a variable over all participants.
 
@@ -534,13 +534,13 @@ The following functions can be used to retrieve globals variables.
 	**Arguments** are:
 
 	-  :php:`varname` the variable name (mandatory). The function can retrieve subjects variables which were saved before or which were decision inputs.
-	-  :php:`$round` the round from which the variable should be retrieved. 
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
 
 	**Also available** as :php:`$getMinPerGroup(...)`, :php:`$getMinPerTreatment(...)` or :php:`$getMinPerRole(...)` following the same logic as described above for :php:`$getAveragePerRole(...)`.
 
 ----
 
-:php:`$getMax('varname', $round = $currentRound)`
+:php:`$getMax('varname', $roundselected = $currentRound)`
 
 	**Function** retrieves the maximum of a variable over all participants.
 
@@ -549,13 +549,13 @@ The following functions can be used to retrieve globals variables.
 	**Arguments** are:
 
 	-  :php:`varname` the variable name (mandatory). The function can retrieve subjects variables which were saved before or which were decision inputs.
-	-  :php:`$round` the round from which the variable should be retrieved. 
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
 
 	**Also available** as :php:`$getMaxPerGroup(...)`, :php:`$getMaxPerTreatment(...)` or :php:`$getMaxPerRole(...)` following the same logic as described above for :php:`$getAveragePerRole(...)`.
 
 ----
 
-:php:`$getMostFrequent('varname', $round = $currentRound)`
+:php:`$getMostFrequent('varname', $roundselected = $currentRound)`
 
 	**Function** retrieves the most frequent outcome over all participants.
 
@@ -564,7 +564,7 @@ The following functions can be used to retrieve globals variables.
 	**Arguments** are:
 
 	-  :php:`varname` the variable name (mandatory). The function can retrieve subjects variables which were saved before or which were decision inputs.
-	-  :php:`$round` the round from which the variable should be retrieved. 
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
 	
 
 ----
@@ -618,7 +618,7 @@ The following functions can be used to retrieve globals variables.
 ----
 
 
-:php:`$getNumDecisions('varname', $round = $currentRound)`
+:php:`$getNumDecisions('varname', $roundselected = $currentRound)`
 
 	**Function** retrieves the number of decisions made.
 
@@ -627,7 +627,7 @@ The following functions can be used to retrieve globals variables.
 	**Arguments** are:
 
 	-  :php:`varname` the variable name (mandatory). The function can retrieve subjects variables which were saved before or which were decision inputs.
-	-  :php:`$round` the round from which the variable should be retrieved. 
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
 
 	**Also available** as :php:`$getNumDecisionsPerGroup(...)` following the same logic as described above for :php:`$getAveragePerRole(...)`. Not available per treatment or per role.
 
@@ -649,7 +649,7 @@ The following functions can be used to retrieve globals variables.
 .. note:: If the winner is drawn by an own program code this code has to be placed before the start button of the stage.
 ----
 
-:php:`$getAvgPriceContract($round = $currentRound)`
+:php:`$getAvgPriceContract($roundselected = $currentRound)`
 
 	**Function** retrieves the average price of all contracts made.
 
@@ -657,11 +657,11 @@ The following functions can be used to retrieve globals variables.
 
 	**Argument** is:
 
-	-  :php:`$round` the round from which the variable should be retrieved. 
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
 
 ----
 
-:php:`$getNumContracts($round = $currentRound, $perSeller = true)`
+:php:`$getNumContracts($roundselected = $currentRound, $perSeller = true)`
 
 	**Function** retrieves the number of contracts per seller or buyer.
 
@@ -669,7 +669,7 @@ The following functions can be used to retrieve globals variables.
 
 	**Arguments** are:
 
-	-  :php:`$round` the round from which the variable should be retrieved. 
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
 	-  :php:`$perSeller` If this is true, contracts are counted for sellers. If it is false, contracts are counted for buyers.
 
 
