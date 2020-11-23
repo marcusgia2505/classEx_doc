@@ -360,7 +360,7 @@ Random matching with constant roles means randomly matching the subjects into ne
 
 .. code:: php
 
-	unset($group_nr_a); //delets the old group numbers for the participants. 
+	unset($group_nr_a); //clears the array where group numbers are stored in the assignment process 
 
 	// This gives arrays with the internal participant ID and the role or treatment
 	$rolesarray = $getRoles();
