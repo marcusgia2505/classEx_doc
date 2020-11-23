@@ -429,7 +429,7 @@ Random matching with constant roles means randomly matching the subjects into ne
 	$resetGroupNr($group_nr_a[$id]);
 
 
-.. warning:: You can find an example for the implemented code in the repository. The game is called "Assignment".
+.. note::  You can find an example for the implemented code in the repository. The game is called "Assignment".
 
 
 Further settings
