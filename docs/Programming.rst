@@ -361,10 +361,10 @@ Here you can find some coding examples:
 .. note:: Keep in mind that you should only retrieve variables at least one stage after saving them. See `Synchronization`_.
 
 
-Function to change group ID
+Function to change role or group ID
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-It is possible to change the group ID of a subject. This enables you to create your own matching algorithms and assign new groups to your subjects. Roles and treatments however cannot be changed this way.
+It is possible to change the role or group ID of a subject. This enables you to create your own matching algorithms and assign new groups to your subjects. Treatments however cannot be changed this way.
 
 :php:`$resetGroupNr($value);`
 
@@ -375,6 +375,19 @@ It is possible to change the group ID of a subject. This enables you to create y
 	**Arguments** are:
 
 	-  :php:`$value` the new group ID for the subjects. The value can also be a variable itself or an array. Usually the most convenient way is to create a matching algorithm in a globals program code returning an array (e.g. called $any_array_name) with participants IDs as keys and the new group IDs as values. The code for the reset-function could then be :php:`$resetGroupNr($any_array_name[$id]);`
+	
+:php:`$resetRole($value);`
+
+	**Function** overwrites the $role variable in the subjects table.
+
+	**Returns** true if overwriting was successful, false in case of an error.
+
+	**Arguments** are:
+
+	-  :php:`$value` the new role for the subject. 
+	
+	
+..note:: Both functions change the $role or $group variable of the respective player and are also change the table containing all the matches. 
 
 
 Variables for lecturers (globals)
