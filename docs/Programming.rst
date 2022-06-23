@@ -468,16 +468,16 @@ The following functions can be used to retrieve globals variables.
 
 ----
 
-:php:`$getMedian('varname', $roundselected = $currentRound)`
+:php:`$getMedian(array)`
 
-	**Function** retrieves the median value of a variable over all participants.
+	**Function** retrieves the median value of an array.
 
 	**Returns** the median value or :php:`null` if no values available.
 
 	**Arguments** are:
 
-	-  :php:`varname` the variable name (mandatory). The function can retrieve subjects variables which were saved before or which were decision inputs.
-	-  :php:`$roundselected` the round from which the variable should be retrieved. 
+	-  :php:`array` an array with data (mandatory). The function needs an array with data (this can be e.g. retrieved with the getValues function).
+	
 
 ----
 
