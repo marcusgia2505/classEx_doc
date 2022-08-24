@@ -800,3 +800,5 @@ This can be achieved via hidden input fields that are filled with javascript. Ju
 Input fields have the identifier "fieldX", where X is the number of the input field (#1, #2,...). An example would be :html2:`<input type="hidden" id="field1" name="bid1" value="">`. If you want too save a javascript value, you write the value into the input field e.g. with :java:`$("#field1").val(1);`. Then the value is set to 1 and it is stored automatically when the participants submit the input element. 
 
 .. note:: At the moment PHP and javascript are not integrated so that variables have to be transferred manually from PHP to javascript and vice versa. In one of the next versions of classEx this should be automatized.
+
+.. note:: In the lecture mode, you can use the Javascript function :java:`setGlobalVar(varName, value)` to store variables to the global variables. 
