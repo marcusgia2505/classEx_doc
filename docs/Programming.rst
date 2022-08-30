@@ -662,7 +662,7 @@ The following functions can be used to retrieve globals variables.
 .. note:: If the winner is drawn by an own program code this code has to be placed before the start button of the stage.
 ----
 
-:php:`$getAvgPriceContract($roundselected = $currentRound)`
+:php:`$getAvgPriceContract($roundselected = $currentRound, $status = 1)`
 
 	**Function** retrieves the average price of all contracts made.
 
@@ -671,10 +671,11 @@ The following functions can be used to retrieve globals variables.
 	**Argument** is:
 
 	-  :php:`$roundselected` the round from which the variable should be retrieved. 
+	-  :php:`$status` Only contracts with this status are selected (1 = confirmed, 2 = open, 3 = rejected, 4 = withdrawn) 
 
 ----
 
-:php:`$getNumContracts($roundselected = $currentRound, $perSeller = true)`
+:php:`$getNumContracts($roundselected = $currentRound, $perSeller = true, $status = 1)`
 
 	**Function** retrieves the number of contracts per seller or buyer.
 
@@ -684,6 +685,36 @@ The following functions can be used to retrieve globals variables.
 
 	-  :php:`$roundselected` the round from which the variable should be retrieved. 
 	-  :php:`$perSeller` If this is true, contracts are counted for sellers. If it is false, contracts are counted for buyers.
+	-  :php:`$status` Only contracts with this status are selected (1 = confirmed, 2 = open, 3 = rejected, 4 = withdrawn) 
+
+----
+
+:php:`$getContractPrices($roundselected = $currentRound, $seller = true, $status = 1)`
+
+	**Function** retrieves prices per seller of buyer.
+
+	**Returns** an array with the internal participant ID as index and the prices of each seller or buyer. With no data, an empty array is returned. If a seller or buyer concluded multiple contracts the sum of prices is returned.
+
+	**Arguments** are:
+
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
+	-  :php:`$seller` If this is true, contracts are counted for sellers. If it is false, contracts are counted for buyers.
+	-  :php:`$status` Only contracts with this status are selected (1 = confirmed, 2 = open, 3 = rejected, 4 = withdrawn) 
+
+----
+
+:php:`$getContractQuantities($roundselected = $currentRound, $seller = true, $status = 1)`
+
+	**Function** retrieves quantities per seller of buyer.
+
+	**Returns** an array with the internal participant ID as index and the quantities of each seller or buyer. With no data, an empty array is returned. If a seller or buyer concluded multiple contracts the sum of quantities is returned.
+
+	**Arguments** are:
+
+	-  :php:`$roundselected` the round from which the variable should be retrieved. 
+	-  :php:`$seller` If this is true, contracts are counted for sellers. If it is false, contracts are counted for buyers.
+	-  :php:`$status` Only contracts with this status are selected (1 = confirmed, 2 = open, 3 = rejected, 4 = withdrawn) 
+
 
 
 
