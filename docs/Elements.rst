@@ -167,6 +167,33 @@ Furthermore, you can delete an input field by clicking on |pic_delete| or provid
 
 .. note:: In all input fields, you can also use variables instead of numbers or text. This can e.g. be useful if you want to set a maximum depending on a variable :php:`$x`. Just enter $x; in the maximum field. This holds true for other fields as well.
 
+
+
+similarity check
+~~~~~~~~~~~~~~~~~~~
+
+In similarity check, the main part consists of one input field and a textbox. You can define a variable in the stage before, and then use that variable name in input field (this stage) for comparing the correct solution with the answer.
+
+There is more setting by clicking on additional setting:
+.. |pic_delete| image:: _static/pic/similarity_check.png
+				:width: 15px
+
+you can define different sentences to show as a message after showing the stars rate in participant screen.
+Also, there are 4 boxes to define star ranges in each game separately.
+Depending on the count of the sentences in the correct solution, the range of the numbers should go higher.
+
+
+.. warning:: please note that the score ranges have a default value each, if you don’t change it depending on the game, it will use the defined value and there might be a chance of having a wrong result.
+
+In the end, similarity check calculation method is:
+Some of the points obtained from the comparison of each pair of sentences(one sentence from the answer with one sentence from the correct solution)
+
+
+
+
+
+
+
 Numeric input field
 --------------------
 
