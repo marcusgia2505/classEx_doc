@@ -572,7 +572,7 @@ There are two alternatives. A start button which has to be clicked by the experi
 
 
 
-similaritycheck
+similarity Check
 ~~~~~~~~~~~~~~~~~~~
 
 In similarity check, the main part consists of one input field and a textbox. You can define a variable in the stage before, and then use that variable name in input field (this stage) for comparing the correct solution with the answer.
@@ -595,7 +595,7 @@ Some of the points obtained from the comparison of each pair of sentences(one se
 
 
 
-PDFdownload
+PDF download
 ------------
 
 In PDF download, the main part consists of one text field(textbox). You can add your desired text includes questions, answers,.... in the textbox.
