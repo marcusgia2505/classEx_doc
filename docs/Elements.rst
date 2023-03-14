@@ -572,7 +572,7 @@ There are two alternatives. A start button which has to be clicked by the experi
 
 
 
-similarity check
+similaritycheck
 ~~~~~~~~~~~~~~~~~~~
 
 In similarity check, the main part consists of one input field and a textbox. You can define a variable in the stage before, and then use that variable name in input field (this stage) for comparing the correct solution with the answer.
@@ -595,6 +595,16 @@ Some of the points obtained from the comparison of each pair of sentences(one se
 
 
 
+PDFdownload
+------------
+
+In PDF download, the main part consists of one text field(textbox). You can add your desired text includes questions, answers,.... in the textbox.
+
+this feature will appear as an input button at the end of a game, and students can download the material of the game( which it was added in the textbox in editing mode)  as a PDF file.
+
+
+
+
 
 
 
@@ -604,14 +614,14 @@ Start button
 .. image:: _static/elements/startbutton.png
     :width: 70%
 
-The start buttons allows to start stages of a game. It is marked in blue and clearly visible to ease guidance for the lecturer. Before the start of the first stage it additionally states the number of logged in participants (here: 1). 
+The start buttons allows to start stages of a game. It is marked in blue and clearly visible to ease guidance for the lecturer. Before the start of the first stage it additionally states the number of logged in participants (here: 1).
 
 .. image:: _static/elements/startbutton2.png
     :width: 70%
 
 After pressing the start button, the stage is started, the button disappears and a counter is shown which counts the number of participants in that stage. In the example it means that there are no red participants (0/0) and one green participant who finished the stage (1/1). Counting can done over all, by role, group or treatment.
 
-The start button can be configured according to the own needs. 
+The start button can be configured according to the own needs.
 
 .. image:: _static/elements/start.png
     :height: 150px
@@ -621,13 +631,13 @@ button label
 feature
 	Instead of starting the current stage, you can also use the start button to jump to different stages. In case you jump to the stage where payoffs are distributed this will surpress the distribution. This can be prevented by following the explanation for the setWinner-function in `Functions`_.
 confirmation message
-	You can set if a pop-up should appear after clicking to confirm the action. 
+	You can set if a pop-up should appear after clicking to confirm the action.
 round
 	You can set if the current round number should be displayed or not.
 stage name
 	You can set if the stage name should be displayed or not.
 count
-	You can set the counter which appears after the start button is clicked. It can count decisions (also by role, treatment or group if set). 
+	You can set the counter which appears after the start button is clicked. It can count decisions (also by role, treatment or group if set).
 
 Automatic start
 ---------------
