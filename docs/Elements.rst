@@ -535,6 +535,47 @@ allow retake
 
 .. note:: Informed Consent: Participants are asked by the browser if the browser can access the webcam or not. Please make participants aware that they do not have to take a picture and ask them for their consent.
 
+similarity check(beta)
+~~~~~~~~~~~~~~~~~~~
+
+In similarity check, the main part consists of one input field and a textbox. You can define a variable in the stage before, and then use that variable name in input field (this stage) for comparing the correct solution with the answer.
+
+There is more setting by clicking on additional setting:
+.. |pic_delete| image:: _static/pic/similarity_check.png
+				:width: 15px
+
+you can define different sentences to show as a message after showing the stars rate in participant screen.
+Also, there are 4 boxes to define star ranges in each game separately.
+Depending on the count of the sentences in the correct solution, the range of the numbers should go higher.
+
+
+.. warning:: please note that the score ranges have a default value each, if you don’t change it depending on the game, it will use the defined value and there might be a chance of having a wrong result.
+
+In the end, similarity check calculation method is:
+Some of the points obtained from the comparison of each pair of sentences(one sentence from the answer with one sentence from the correct solution)
+
+
+
+
+
+PDF download
+~~~~~~~~~~~~~~~~~~~
+
+In PDF download, the main part consists of one text field(textbox). You can add your desired text includes questions, answers,.... in the textbox.
+
+this feature will appear as an input button at the end of a game, and students can download the material of the game( which it was added in the textbox in editing mode)  as a PDF file.
+
+
+
+openAI response
+~~~~~~~~~~~~~~~~~~~
+
+In openAI response feature, the main part consists of one text field(textbox). You can add your desired prompt,questions, sample solution,.... in the textbox in this stage. Then use the variable name (the one that you defined in one stage before) to send the student's answer and your prompt to openAI server. As a Response the AI will send you a feedback on student's answer depends on your given Prompt. At the end it will show the feedback to the participants.
+
+
+
+
+
 Retrieving Pictures
 -------------------
 Pictures can be retrieved in the following ways:
@@ -569,47 +610,6 @@ The start button is used to initiate a stage.
 .. important:: Each stage requires a start button or an automatic start. If stages have result elements, this is not true as result elements automatically provide a button to start the stage (if no other button is defined).
 
 There are two alternatives. A start button which has to be clicked by the experimenter or an automatic start.
-
-
-
-similarity Check(beta)
-~~~~~~~~~~~~~~~~~~~
-
-In similarity check, the main part consists of one input field and a textbox. You can define a variable in the stage before, and then use that variable name in input field (this stage) for comparing the correct solution with the answer.
-
-There is more setting by clicking on additional setting:
-.. |pic_delete| image:: _static/pic/similarity_check.png
-				:width: 15px
-
-you can define different sentences to show as a message after showing the stars rate in participant screen.
-Also, there are 4 boxes to define star ranges in each game separately.
-Depending on the count of the sentences in the correct solution, the range of the numbers should go higher.
-
-
-.. warning:: please note that the score ranges have a default value each, if you don’t change it depending on the game, it will use the defined value and there might be a chance of having a wrong result.
-
-In the end, similarity check calculation method is:
-Some of the points obtained from the comparison of each pair of sentences(one sentence from the answer with one sentence from the correct solution)
-
-
-
-
-
-PDF download
-------------
-
-In PDF download, the main part consists of one text field(textbox). You can add your desired text includes questions, answers,.... in the textbox.
-
-this feature will appear as an input button at the end of a game, and students can download the material of the game( which it was added in the textbox in editing mode)  as a PDF file.
-
-
-
-openAI response
-------------
-
-In openAI response feature, the main part consists of one text field(textbox). You can add your desired prompt,questions, sample solution,.... in the textbox in this stage. Then use the variable name (the one that you defined in one stage before) to send the student's answer and your prompt to openAI server. As a Response the AI will send you a feedback on student's answer depends on your given Prompt. At the end it will show the feedback to the participants.
-
-
 
 
 
