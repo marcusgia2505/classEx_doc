@@ -535,8 +535,8 @@ allow retake
 
 .. note:: Informed Consent: Participants are asked by the browser if the browser can access the webcam or not. Please make participants aware that they do not have to take a picture and ask them for their consent.
 
-similarity check(beta)
-~~~~~~~~~~~~~~~~~~~
+Similarity check(beta)
+~~~~~~~~~~~~~~~~~~~~~
 
 In similarity check, the main part consists of one input field and a textbox. You can define a variable in the stage before, and then use that variable name in input field (this stage) for comparing the correct solution with the answer.
 
@@ -557,18 +557,16 @@ Some of the points obtained from the comparison of each pair of sentences(one se
 
 
 
-
 PDF download
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
 
 In PDF download, the main part consists of one text field(textbox). You can add your desired text includes questions, answers,.... in the textbox.
 
 this feature will appear as an input button at the end of a game, and students can download the material of the game( which it was added in the textbox in editing mode)  as a PDF file.
 
 
-
-openAI response
-~~~~~~~~~~~~~~~~~~~
+OpenAI response
+~~~~~~~~~~~~~~~
 
 In openAI response feature, the main part consists of one text field(textbox). You can add your desired prompt,questions, sample solution,.... in the textbox in this stage. Then use the variable name (the one that you defined in one stage before) to send the student's answer and your prompt to openAI server. As a Response the AI will send you a feedback on student's answer depends on your given Prompt. At the end it will show the feedback to the participants.
 
