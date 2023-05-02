@@ -535,6 +535,33 @@ allow retake
 
 .. note:: Informed Consent: Participants are asked by the browser if the browser can access the webcam or not. Please make participants aware that they do not have to take a picture and ask them for their consent.
 
+
+
+Retrieving Pictures
+-------------------
+Pictures can be retrieved in the following ways:
+
+At the participant' screen
+	You can use the normal variable notation ($image;) to display pictures in text boxes.
+
+At the lecturer screen
+	You can use :php:`$getValues(...)` to retrieve the pictures of all participants and display them (see :ref:`Programming:Functions`).
+
+From the stored data
+	In the downloaded data you find stored images in the subjects table. They are base64 decoded and can be encoded with free online tools. Just take away "data:image/jpeg;base64," from the string, so that it starts e.g. with "/9j/....".
+
+Javascript program
+~~~~~~~~~~~~~~~~~~~
+
+You can also add small javascript programs to the participant screen. More information can be found at :ref:`Programming:Javascript`.
+
+Filled in form 
+~~~~~~~~~~~~~~
+
+This element allows you to display the filled in input element of the previous stage. This element is outdated and should only be used with care.
+
+
+
 Similarity check(beta)
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -570,32 +597,6 @@ OpenAI response
 
 In openAI response feature, the main part consists of one text field(textbox). You can add your desired prompt,questions, sample solution,.... in the textbox in this stage. Then use the variable name (the one that you defined in one stage before) to send the student's answer and your prompt to openAI server. As a Response the AI will send you a feedback on student's answer depends on your given Prompt. At the end it will show the feedback to the participants.
 
-
-
-
-
-Retrieving Pictures
--------------------
-Pictures can be retrieved in the following ways:
-
-At the participant' screen
-	You can use the normal variable notation ($image;) to display pictures in text boxes.
-
-At the lecturer screen
-	You can use :php:`$getValues(...)` to retrieve the pictures of all participants and display them (see :ref:`Programming:Functions`).
-
-From the stored data
-	In the downloaded data you find stored images in the subjects table. They are base64 decoded and can be encoded with free online tools. Just take away "data:image/jpeg;base64," from the string, so that it starts e.g. with "/9j/....".
-
-Javascript program
-~~~~~~~~~~~~~~~~~~~
-
-You can also add small javascript programs to the participant screen. More information can be found at :ref:`Programming:Javascript`.
-
-Filled in form 
-~~~~~~~~~~~~~~
-
-This element allows you to display the filled in input element of the previous stage. This element is outdated and should only be used with care.
 
 Elements for lecturers
 ======================
