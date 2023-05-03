@@ -565,21 +565,27 @@ This element allows you to display the filled in input element of the previous s
 Similarity check(beta)
 ~~~~~~~~~~~~~~~~~~~~~
 
-In similarity check, the main part consists of one input field and a textbox. You can define a variable in the stage before, and then use that variable name in input field (this stage) for comparing the correct solution with the answer.
+In openAI response feature, the main part consists of one input field and a textbox to define a variable and get the student’s answer. In the next stage, you can use the predefined variable name and enter the correct solution for comparing the correct solution with the student’s answer.
+You can add a prompt, questions, and sample solution, in the textbox at this stage. Then use the variable name (the one that you defined in the previous stage) to send the student's answer and your prompt to openAI server. As a Response, the AI will send you feedback on the student's answer depending on your given Prompt. In the end, it will show the feedback to the participants.
 
-There is more setting by clicking on additional setting:
-.. |pic_delete| image:: _static/pic/similarity_check.png
-				:width: 15px
+In Similarity check, the main part consists of one input field and a textbox to define a variable and get the student’s answer. In the next stage, you can use the predefined variable name and enter the correct solution for comparing the correct solution with the student’s answer.
+.. image:: _static/elements/firststep.png
+:width: 15px
+.. image:: _static/elements/variablesimilarity.png
+:width: 15px
+There are more options to set by clicking on the additional setting:
+.. image:: _static/elements/additionamset.png
+:width: 15px
 
-you can define different sentences to show as a message after showing the stars rate in participant screen.
+It is possible to define different messages to show after the stars rate on the participant screen.
 Also, there are 4 boxes to define star ranges in each game separately.
 Depending on the count of the sentences in the correct solution, the range of the numbers should go higher.
 
 
-.. warning:: please note that the score ranges have a default value each, if you don’t change it depending on the game, it will use the defined value and there might be a chance of having a wrong result.
+.. warning:: Please note that the score ranges have a default value each, if you don’t change it depending on the game, it will use the defined value and there might be a chance of having a wrong result.
 
 In the end, similarity check calculation method is:
-Some of the points obtained from the comparison of each pair of sentences(one sentence from the answer with one sentence from the correct solution)
+Some of the points obtained from the comparison of each pair of sentences (one sentence from the answer with one sentence from the correct solution)
 
 
 
@@ -587,15 +593,23 @@ Some of the points obtained from the comparison of each pair of sentences(one se
 PDF download
 ~~~~~~~~~~~~
 
-In PDF download, the main part consists of one text field(textbox). You can add your desired text includes questions, answers,.... in the textbox.
+In PDF download, the main part consists of one text field(textbox). It is possible to add a desired text including questions, answers and etc, in the textbox.
+.. image:: _static/elements/pdfmaterial.png
+This feature will appear as an input button at the end of a game, and students can download the material of the game (which was added in the textbox in editing mode) as a PDF file.
+.. image:: _static/elements/pdfdl.png
 
-this feature will appear as an input button at the end of a game, and students can download the material of the game( which it was added in the textbox in editing mode)  as a PDF file.
 
 
 OpenAI response
 ~~~~~~~~~~~~~~~
 
-In openAI response feature, the main part consists of one text field(textbox). You can add your desired prompt,questions, sample solution,.... in the textbox in this stage. Then use the variable name (the one that you defined in one stage before) to send the student's answer and your prompt to openAI server. As a Response the AI will send you a feedback on student's answer depends on your given Prompt. At the end it will show the feedback to the participants.
+In openAI response feature, the main part consists of one input field and a textbox to define a variable and get the student’s answer. In the next stage, you can use the predefined variable name and enter the correct solution for comparing the correct solution with the student’s answer.
+You can add a prompt, questions, and sample solution, in the textbox at this stage. Then use the variable name (the one that you defined in the previous stage) to send the student's answer and your prompt to openAI server. As a Response, the AI will send you feedback on the student's answer depending on your given Prompt. In the end, it will show the feedback to the participants.
+
+It is possible to define different messages to show after scoring on the participant screen.
+
+
+
 
 
 Elements for lecturers
