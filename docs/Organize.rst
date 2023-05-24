@@ -18,8 +18,9 @@ The currently active mode is marked by a darker shade around its symbol |pic_ove
 .. |pic_overview| image:: _static/pic/lecture.png
    :width: 15px
 .. |pic_editmode| image:: _static/pic/editMode.png
-   :width: 15px
-
+   :width: 15px 
+.. |pic_share| image:: _static/pic/share.png
+    :width: 15px
 
 Settings in the top bar
 ========================
@@ -97,6 +98,17 @@ Copy and delete games
 If you want to make a copy of a game (e.g. to create your own version of a ready-made game), click on the copy button |pic_copy|. This will create a copy of the game in your *general folder*. You can edit this copy and thus make your own version of any game on classEx. Alternatively, you can go to the editing mode and click on the drop down menu *game* and then select *copy game*. 
 
 The *delete game* icon |pic_delete| deletes a game. This can't be reversed.
+
+Share games
+=============
+
+By clicking on the sharing symbol |pic_share| a sharing link will be created and copied to the clipboard. You can share this link with other users. The other user has to be logged into their classEx account first and then pastes the link. Then a link to the shared game is added to the general folder and the other user can test the game.
+
+.. note:: Only a link to the game is copied to the other user, not the game itself. The game remains in the ownership of the original user. The new user can make a copy of the references game if they want to edit it.
+
+.. note:: You can only share own games.
+
+
 
 Repository
 ==========
