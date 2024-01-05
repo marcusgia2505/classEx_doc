@@ -10,7 +10,7 @@ classEx documentation
 .. figure:: _static/introduction/overview.png
    :alt:  300px
 
-Welcome to the documentation of classEx. In this documentation you can find all information on how to use classEx. General information on classEx can be found at https://classEx.de.
+Welcome to the documentation of classEx. In this documentation, you can find all information on how to use classEx. General information on classEx can be found at https://classEx.de.
 
 .. note:: You can also download a `pdf version`_ of the documentation. Please note that we change the documentation from time to time. So you might check from time if your PDF is still up-to-date. For this just compare the release version. Current release is 1.0.
 
