@@ -565,7 +565,7 @@ This element allows you to display the filled in input element of the previous s
 Similarity check(beta)
 ~~~~~~~~~~~~~~~~~~~~~
 
-In openAI response feature, the main part consists of one input field and a textbox to define a variable and get the student’s answer. In the next stage, you can use the predefined variable name and enter the correct solution for comparing the correct solution with the student’s answer.
+In this feature, the main part consists of one input field and a textbox to define a variable and get the student’s answer. In the next stage, you can use the predefined variable name and enter the correct solution for comparing the correct solution with the student’s answer.
 You can add a prompt, questions, and sample solution, in the textbox at this stage. Then use the variable name (the one that you defined in the previous stage) to send the student's answer and your prompt to openAI server. As a Response, the AI will send you feedback on the student's answer depending on your given Prompt. In the end, it will show the feedback to the participants.
 
 In Similarity check, the main part consists of one input field and a textbox to define a variable and get the student’s answer. In the next stage, you can use the predefined variable name and enter the correct solution for comparing the correct solution with the student’s answer.
@@ -600,16 +600,29 @@ This feature will appear as an input button at the end of a game, and students c
 
 
 
-OpenAI response
+OpenAI feedback
 ~~~~~~~~~~~~~~~
 
-In openAI response feature, the main part consists of one input field and a textbox to define a variable and get the student’s answer. In the next stage, you can use the predefined variable name and enter the correct solution for comparing the correct solution with the student’s answer.
+In OpenAI feedback feature, the main part consists of one input field and a textbox to define a variable and get the student’s answer. In the next stage, you can use the predefined variable name and enter the correct solution for comparing the correct solution with the student’s answer.
 You can add a prompt, questions, and sample solution, in the textbox at this stage. Then use the variable name (the one that you defined in the previous stage) to send the student's answer and your prompt to openAI server. As a Response, the AI will send you feedback on the student's answer depending on your given Prompt. In the end, it will show the feedback to the participants.
 
 It is possible to define different messages to show after scoring on the participant screen.
 
+llama3 AI feedback
+~~~~~~~~~~~~~~~~~~
 
+In this feature, the main part consists of one input field and a textbox to define a variable and get the student’s answer. In the next stage, you can use the predefined variable name and enter the correct solution for comparing the correct solution with the student’s answer.
+You can add a prompt, questions, and sample solution, in the textbox at this stage. Then use the variable name (the one that you defined in the previous stage) to send the student's answer and your prompt. As a Response, the AI will send you feedback on the student's answer depending on your given Prompt. In the end, it will show the feedback to the participants.
 
+LLaMA 3 is an open-source AI model developed by Meta AI, designed to significantly improve natural language understanding and generation, showcasing advancements in performance, efficiency, and scalability.
+
+Mixtral AI feedback
+~~~~~~~~~~~~~~~~~~~
+
+In this feature, the main part consists of one input field and a textbox to define a variable and get the student’s answer. In the next stage, you can use the predefined variable name and enter the correct solution for comparing the correct solution with the student’s answer.
+You can add a prompt, questions, and sample solution, in the textbox at this stage. Then use the variable name (the one that you defined in the previous stage) to send the student's answer and your prompt. As a Response, the AI will send you feedback on the student's answer depending on your given Prompt. In the end, it will show the feedback to the participants.
+
+Mixtral AI, developed by Mistral AI, harnesses a sparse mixture of experts (SMoE) to deliver unmatched efficiency and superior performance. Licensed under Apache 2.0, this open-source model excels in cost-effective computation, outperforming standard benchmarks and offering a robust solution for advanced AI applications.
 
 
 Elements for lecturers
