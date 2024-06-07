@@ -593,10 +593,10 @@ Some of the points obtained from the comparison of each pair of sentences (one s
 PDF download
 ~~~~~~~~~~~~
 
-In PDF download, the main part consists of one text field(textbox). It is possible to add a desired text including questions, answers and etc, in the textbox.
-.. image:: _static/elements/pdfmaterial.png
-This feature will appear as an input button at the end of a game, and students can download the material of the game (which was added in the textbox in editing mode) as a PDF file.
-.. image:: _static/elements/pdfdl.png
+The PDF Download element  integrates a user-friendly button within the game interface, allowing students to download specific parts of the game material in PDF format.
+This feature includes a text field where you can add custom text, such as questions and answers,and other relevant content. Additionally, you can add image tags which will be rendered as images in the final PDF document.
+Once the content is added, students can easily download it as a PDF document, facilitating access to the material for offline review and study.
+.. image:: _static/elements/pdfDL.png
 
 
 
