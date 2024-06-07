@@ -593,7 +593,7 @@ Some of the points obtained from the comparison of each pair of sentences (one s
 PDF download
 ~~~~~~~~~~~~
 
-.. image:: _static/pdfDL.png
+.. image:: _static/pdfDL.PNG
  :width: 49%
 
 
