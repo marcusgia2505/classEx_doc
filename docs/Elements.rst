@@ -597,6 +597,7 @@ The PDF Download element  integrates a user-friendly button within the game inte
 This feature includes a text field where you can add custom text, such as questions and answers,and other relevant content. Additionally, you can add image tags which will be rendered as images in the final PDF document.
 Once the content is added, students can easily download it as a PDF document, facilitating access to the material for offline review and study.
 .. image:: _static/elements/pdfDL.png
+ :width: 49%
 
 
 
