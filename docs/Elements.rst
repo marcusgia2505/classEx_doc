@@ -593,10 +593,11 @@ Some of the points obtained from the comparison of each pair of sentences (one s
 PDF download
 ~~~~~~~~~~~~
 
+
 The PDF Download element  integrates a user-friendly button within the game interface, allowing students to download specific parts of the game material in PDF format.
 This feature includes a text field where you can add custom text, such as questions and answers,and other relevant content. Additionally, you can add image tags which will be rendered as images in the final PDF document.
 Once the content is added, students can easily download it as a PDF document, facilitating access to the material for offline review and study.
-.. image:: _static/elements/pdfDL.png
+.. image:: _static/pdfDL.png
  :width: 49%
 
 
