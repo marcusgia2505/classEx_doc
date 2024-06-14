@@ -594,37 +594,76 @@ PDF download
 ~~~~~~~~~~~~
 
 .. image:: _static/pdfDL.PNG
- :width: 49%
+ :width: 100%
 
-
-The PDF Download element  integrates a user-friendly button within the game interface, allowing students to download specific parts of the game material in PDF format.
+The PDF Download element integrates a user-friendly button within the game interface, allowing students to download specific parts of the game material in PDF format.
 This feature includes a text field where you can add custom text, such as questions and answers,and other relevant content. Additionally, you can add image tags which will be rendered as images in the final PDF document.
 Once the content is added, students can easily download it as a PDF document, facilitating access to the material for offline review and study.
-
-
 
 
 OpenAI feedback
 ~~~~~~~~~~~~~~~
 
-In OpenAI feedback feature, the main part consists of one input field and a textbox to define a variable and get the student’s answer. In the next stage, you can use the predefined variable name and enter the correct solution for comparing the correct solution with the student’s answer.
-You can add a prompt, questions, and sample solution, in the textbox at this stage. Then use the variable name (the one that you defined in the previous stage) to send the student's answer and your prompt to openAI server. As a Response, the AI will send you feedback on the student's answer depending on your given Prompt. In the end, it will show the feedback to the participants.
+.. image:: _static/iputAI.PNG
+ :width: 50%
 
-It is possible to define different messages to show after scoring on the participant screen.
+.. image:: _static/AIfeature.PNG
+ :width: 50%
+
+The OpenAI feedback element allows you to send a request that includes a student's answer and a specific prompt to the OpenAI server to receive tailored AI-generated feedback. This feedback is crafted based on the provided prompt and is intended for display to students.
+
+to use the feature you need to Configure the input element, variable name and a textbox for capturing the student's answer in the first stage.
+In the next stage of the game, you need to use the same input variable that you set previously and define the output variable name(to store the feedback), and the prompt.
+For the prompt, you can define a scenario,questions,sample solution,etc in the textbox.
+
+variable
+Ensure all variable's names are clearly defined and used consistently.
+Th content field is associated with the system-level message and provides context or high-level instructions for the conversation. It helps set the tone or guide the behavior of the AI model during the conversation. Please only change this field, if you want to have another role!
+The temperature is a parameter that influences the randomness of the model responses. A higher temperature value results in more varied and creative responses, while a lower value makes the responses more focused and deterministic. It is a measure of how much randomness is introduced into the generated text.
+Output Storage: store the response of AI(output), without showing it to the participants.
+
 
 llama3 AI feedback
 ~~~~~~~~~~~~~~~~~~
 
-In this feature, the main part consists of one input field and a textbox to define a variable and get the student’s answer. In the next stage, you can use the predefined variable name and enter the correct solution for comparing the correct solution with the student’s answer.
-You can add a prompt, questions, and sample solution, in the textbox at this stage. Then use the variable name (the one that you defined in the previous stage) to send the student's answer and your prompt. As a Response, the AI will send you feedback on the student's answer depending on your given Prompt. In the end, it will show the feedback to the participants.
+.. image:: _static/inputllama.PNG
+ :width: 50%
+
+.. image:: _static/llamafeedback.PNG
+ :width: 50%
+
+The llama3 AI feedback element allows you to send a request that includes a student's answer and a specific prompt to receive tailored AI-generated feedback. This feedback is crafted based on the provided prompt and is intended for display to students.
+
+to use the feature you need to Configure the input element, variable name and a textbox for capturing the student's answer in the first stage.
+In the next stage of the game, you need to use the same input variable that you set previously and define the output variable name(to store the feedback), and the prompt.
+For the prompt, you can define a scenario,questions,sample solution,etc in the textbox.
+
+variable
+Ensure all variable's names are clearly defined and used consistently.
+The temperature is a parameter that influences the randomness of the model responses. A higher temperature value results in more varied and creative responses, while a lower value makes the responses more focused and deterministic. It is a measure of how much randomness is introduced into the generated text.
+Output Storage: store the response of AI(output), without showing it to the participants.
 
 LLaMA 3 is an open-source AI model developed by Meta AI, designed to significantly improve natural language understanding and generation, showcasing advancements in performance, efficiency, and scalability.
 
 Mixtral AI feedback
 ~~~~~~~~~~~~~~~~~~~
 
-In this feature, the main part consists of one input field and a textbox to define a variable and get the student’s answer. In the next stage, you can use the predefined variable name and enter the correct solution for comparing the correct solution with the student’s answer.
-You can add a prompt, questions, and sample solution, in the textbox at this stage. Then use the variable name (the one that you defined in the previous stage) to send the student's answer and your prompt. As a Response, the AI will send you feedback on the student's answer depending on your given Prompt. In the end, it will show the feedback to the participants.
+.. image:: _static/inputllama.PNG
+ :width: 50%
+
+.. image:: _static/mixtralAI.PNG
+ :width: 50%
+
+The Mixtral AI feedback element allows you to send a request that includes a student's answer and a specific prompt to receive tailored AI-generated feedback. This feedback is crafted based on the provided prompt and is intended for display to students.
+
+to use the feature you need to Configure the input element, variable name and a textbox for capturing the student's answer in the first stage.
+In the next stage of the game, you need to use the same input variable that you set previously and define the output variable name(to store the feedback), and the prompt.
+For the prompt, you can define a scenario,questions,sample solution,etc in the textbox.
+
+variable
+Ensure all variable's names are clearly defined and used consistently.
+The temperature is a parameter that influences the randomness of the model responses. A higher temperature value results in more varied and creative responses, while a lower value makes the responses more focused and deterministic. It is a measure of how much randomness is introduced into the generated text.
+Output Storage: store the response of AI(output), without showing it to the participants.
 
 Mixtral AI, developed by Mistral AI, harnesses a sparse mixture of experts (SMoE) to deliver unmatched efficiency and superior performance. Licensed under Apache 2.0, this open-source model excels in cost-effective computation, outperforming standard benchmarks and offering a robust solution for advanced AI applications.
 
