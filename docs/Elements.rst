@@ -668,6 +668,31 @@ Output Storage: store the response of AI(output), without showing it to the part
 Mixtral AI, developed by Mistral AI, harnesses a sparse mixture of experts (SMoE) to deliver unmatched efficiency and superior performance. Licensed under Apache 2.0, this open-source model excels in cost-effective computation, outperforming standard benchmarks and offering a robust solution for advanced AI applications.
 
 
+
+Progressbar/round
+~~~~~~~~~~~~~~~~~~~
+
+.. image:: _static/progressbar.PNG
+ :width: 50%
+
+.. image:: _static/pprogress.PNG
+ :width: 50%
+
+It is possible to set the Progressbar/Round in the "assignment & matching" tab of each game. This feature allows you to add either a progress bar or a round counter to each game. By default, this feature is disabled (set to 'none'). When enabled, it will be shown to the participant:
+Percentage Progress Bar: Displays how much of the game has been completed.
+Page Number Progress Bar: Shows the number of completed stages.
+Round Counter: Shows the number of completed rounds.
+Only one option can be active at a time to ensure clarity for participants.
+
+variable
+Ensure all variable's names are clearly defined and used consistently.
+The temperature is a parameter that influences the randomness of the model responses. A higher temperature value results in more varied and creative responses, while a lower value makes the responses more focused and deterministic. It is a measure of how much randomness is introduced into the generated text.
+Output Storage: store the response of AI(output), without showing it to the participants.
+
+Mixtral AI, developed by Mistral AI, harnesses a sparse mixture of experts (SMoE) to deliver unmatched efficiency and superior performance. Licensed under Apache 2.0, this open-source model excels in cost-effective computation, outperforming standard benchmarks and offering a robust solution for advanced AI applications.
+
+
+
 Elements for lecturers
 ======================
 
@@ -1090,3 +1115,5 @@ first variable / last variable
 
 count
 	Participants are counted all together (or per treatment / role / group).
+
+
