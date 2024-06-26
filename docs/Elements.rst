@@ -605,7 +605,7 @@ OpenAI feedback
 ~~~~~~~~~~~~~~~
 
 .. image:: _static/iputAI.PNG
- :width: 50%
+ :width: 40%
 
 .. image:: _static/AIfeature.PNG
  :width: 50%
@@ -630,7 +630,7 @@ llama3 AI feedback
 ~~~~~~~~~~~~~~~~~~
 
 .. image:: _static/inputllama.PNG
- :width: 50%
+ :width: 40%
 
 .. image:: _static/llamafeedback.PNG
  :width: 50%
@@ -654,7 +654,7 @@ Mixtral AI feedback
 ~~~~~~~~~~~~~~~~~~~
 
 .. image:: _static/inputllama.PNG
- :width: 50%
+ :width: 40%
 
 .. image:: _static/mixtralAI.PNG
  :width: 50%
