@@ -617,9 +617,9 @@ In the next stage of the game, you need to use the same input variable that you 
 For the prompt, you can define a scenario,questions,sample solution,etc in the textbox.
 
 variable
-	Ensure all variable's names are clearly defined and used consistently.<br>
-	Th content field is associated with the system-level message and provides context or high-level instructions for the conversation. It helps set the tone or guide the behavior of the AI model during the conversation. Please only change this field, if you want to have another role!<br>
-	The temperature is a parameter that influences the randomness of the model responses. A higher temperature value results in more varied and creative responses, while a lower value makes the responses more focused and deterministic. It is a measure of how much randomness is introduced into the generated text.<br>
+	Ensure all variable's names are clearly defined and used consistently.\
+	Th content field is associated with the system-level message and provides context or high-level instructions for the conversation. It helps set the tone or guide the behavior of the AI model during the conversation. Please only change this field, if you want to have another role!\
+	The temperature is a parameter that influences the randomness of the model responses. A higher temperature value results in more varied and creative responses, while a lower value makes the responses more focused and deterministic. It is a measure of how much randomness is introduced into the generated text.\
 	Output Storage: store the response of AI(output), without showing it to the participants.
 
 
@@ -639,9 +639,9 @@ In the next stage of the game, you need to use the same input variable that you 
 For the prompt, you can define a scenario,questions,sample solution,etc in the textbox.
 
 variable
-	Ensure all variable's names are clearly defined and used consistently.<br>
-	The temperature is a parameter that influences the randomness of the model responses. A higher temperature value results in more varied and creative responses, while a lower value makes the responses more focused and deterministic. It is a measure of how much randomness is introduced into the generated text.<br>
-	Output Storage: store the response of AI(output), without showing it to the participants.<br>
+	Ensure all variable's names are clearly defined and used consistently.\
+	The temperature is a parameter that influences the randomness of the model responses. A higher temperature value results in more varied and creative responses, while a lower value makes the responses more focused and deterministic. It is a measure of how much randomness is introduced into the generated text.\
+	Output Storage: store the response of AI(output), without showing it to the participants.\
 	LLaMA 3 is an open-source AI model developed by Meta AI, designed to significantly improve natural language understanding and generation, showcasing advancements in performance, efficiency, and scalability.
 
 Mixtral AI feedback
@@ -660,9 +660,9 @@ In the next stage of the game, you need to use the same input variable that you 
 For the prompt, you can define a scenario,questions,sample solution,etc in the textbox.
 
 variable
-	Ensure all variable's names are clearly defined and used consistently.<br>
-	The temperature is a parameter that influences the randomness of the model responses. A higher temperature value results in more varied and creative responses, while a lower value makes the responses more focused and deterministic. It is a measure of how much randomness is introduced into the generated text.<br>
-	Output Storage: store the response of AI(output), without showing it to the participants.<br>
+	Ensure all variable's names are clearly defined and used consistently.\
+	The temperature is a parameter that influences the randomness of the model responses. A higher temperature value results in more varied and creative responses, while a lower value makes the responses more focused and deterministic. It is a measure of how much randomness is introduced into the generated text.\
+	Output Storage: store the response of AI(output), without showing it to the participants.\
 	Mixtral AI, developed by Mistral AI, harnesses a sparse mixture of experts (SMoE) to deliver unmatched efficiency and superior performance. Licensed under Apache 2.0, this open-source model excels in cost-effective computation, outperforming standard benchmarks and offering a robust solution for advanced AI applications.
 
 
@@ -676,10 +676,10 @@ Progressbar/round
 .. image:: _static/pprogress.PNG
  :width: 50%
 
-It is possible to set the Progressbar/Round in the "assignment & matching" tab of each game. This feature allows you to add either a progress bar or a round counter to each game. By default, this feature is disabled (set to 'none'). When enabled, it will be shown to the participant:<br>
-Percentage Progress Bar: Displays how much of the game has been completed.<br>
-Page Number Progress Bar: Shows the number of completed stages.<br>
-Round Counter: Shows the number of completed rounds.<br>
+It is possible to set the Progressbar/Round in the "assignment & matching" tab of each game. This feature allows you to add either a progress bar or a round counter to each game. By default, this feature is disabled (set to 'none'). When enabled, it will be shown to the participant:\
+Percentage Progress Bar: Displays how much of the game has been completed.\
+Page Number Progress Bar: Shows the number of completed stages.\
+Round Counter: Shows the number of completed rounds.\
 Only one option can be active at a time to ensure clarity for participants.
 
 
