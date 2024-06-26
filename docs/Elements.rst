@@ -618,8 +618,11 @@ For the prompt, you can define a scenario,questions,sample solution,etc in the t
 
 variable
 	Ensure all variable's names are clearly defined and used consistently. |
+
 	Th content field is associated with the system-level message and provides context or high-level instructions for the conversation. It helps set the tone or guide the behavior of the AI model during the conversation. Please only change this field, if you want to have another role!\
+
 	The temperature is a parameter that influences the randomness of the model responses. A higher temperature value results in more varied and creative responses, while a lower value makes the responses more focused and deterministic. It is a measure of how much randomness is introduced into the generated text. |
+
 	Output Storage: store the response of AI(output), without showing it to the participants.
 
 
