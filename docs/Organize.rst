@@ -117,13 +117,14 @@ The repository lists all public games created by you and other lecturers and all
 
 If you do not want your game to be listed in the repository you have to change its status from public to private. 
 
-.. image:: _static/Repository.PNG
+.. image:: _static/repositorylist.PNG
     :alt:  300px
     
 Search games
 ------------
 
-The repository lists all games which were set public by their owners. The list can be searched by the different criteria on the left hand side. The switch button disables viewing a certain criterion in the list. You can also make a free text search by typing in the search box in the top right corner. Clicking on the *Game information* button shows some more information and a sample screenshot (if provided by the owner). 
+The repository lists all games which were set public by their owners.
+It provides easy access to all available games, enabling you to search for and, when needed, import public games created by other users into your own panel. The list has been optimized for improved search speed and usability, ensuring faster performance. Additionally, the search box offers comprehensive searches across all fields, enhancing efficiency and providing a streamlined user experience.
 
 Import games
 -------------

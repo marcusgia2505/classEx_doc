@@ -367,6 +367,12 @@ Excelfile
 
 The excel files contain all variables recorded in the game. A file contains an overview of participants, decisions, contracts (if made), payoffs (if made) and assignment to roles, treatments & groups. The excel file can be downloaded at any time during the game and always shows all currently recorded data. It can also be accessed after a new game has started. In order to get previous data, just select the respective session from the previous results menu. When the game is open, you can download results again via *download as excel*. 
 
+
+"Decision (Wide Format)", a new tab sheet, has been added to the run data Excel file. This format provides a broader view compared to the "Decision (Subject-Table)" tab, enabling easier analysis and comparisons by displaying data horizontally for a more streamlined overview.
+.. image:: _static/decisionwidedata.PNG
+    :alt:  300px
+
+
 xecon
 -----
 
