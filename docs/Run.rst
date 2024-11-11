@@ -370,7 +370,7 @@ The excel files contain all variables recorded in the game. A file contains an o
 
 "Decision (Wide Format)", a new tab sheet, has been added to the run data Excel file. This format provides a broader view compared to the "Decision (Subject-Table)" tab, enabling easier analysis and comparisons by displaying data horizontally for a more streamlined overview.
 
-.. image:: _static/decisionwidedata.PNG
+.. image:: _static/decisionwidedataa.PNG
     :alt:  300px
 
 
