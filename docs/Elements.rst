@@ -423,11 +423,11 @@ Contract
 With this element, you can enable participants to conclude contracts. By adjusting the settings, you can customize the contract to your needs. Contracts can be used to trade a commodity between subjects in real time. Subjects move around in the classroom and talk to each other. When they agreed on a price, they enter it into the input mask together with the signature of the counterpart (see seller screen). The counterpart has to accept the trade (or reject it, see buyer screen).
 
 **The screen for the seller**
-.. image:: _static/rungame/seller_png.png
+.. image:: _static/rungame/seller_png.PNG
     :width:  100%
 
 **The screen for the buyer**
-.. image:: _static/rungame/buyer_png.png
+.. image:: _static/rungame/buyer_png.PNG
     :width:  100%
 
 The contracts made can be shown at the lecturer's screen with the `Contract table`_. In addition, there are special functions in globals and subjects programs to retrieve contracts (see :ref:`Programming:Programming`). All contracts are also stored in the standard excel file which can be retrieved in the data menu (see :ref:`Run:Data`). 
