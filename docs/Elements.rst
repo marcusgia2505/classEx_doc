@@ -72,7 +72,7 @@ Display formulas
 
 Although classEx does not directly support Latex, it is possible to display formulas to participants in a more elegant way in a text box with MathML. It is best to use the NON WYSIWG editor in the text box. Switching to the WYSIWG version already translates your HTML code into the formula.
 
-An exemple - the following HTML code leads to the following formula:
+An example - the following HTML code leads to the following formula:
 
 .. code:: HTML
 <math xmlns="http://www.w3.org/1998/Math/MathML">
