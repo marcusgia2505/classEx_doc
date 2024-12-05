@@ -15,6 +15,20 @@ Changelog
 .. - fix: Empty course passwords (login for participant) are now possible again
 .. - fix: ``$findGroupSum()`` did not work as expected
 
+Release 4
+-----------
+Major features
+^^^^^^^^^^^^^^
+- Developed a fully automated registration process for classEx users.
+- Optimized the repository list, for better search performance.
+- Developed a new admin panel to streamline data management tasks, such as reset passwords and course management.
+- Added functionality to view, manage, and delete outdated run-data in each game. ( should I write this option? because it's only for super-admin users.)
+- Enabled progress bar feature to display stages of game during gameplay.
+- Enabled a PDF download feature for exporting game materials.
+- Added file upload functionality for lecturers within each game.
+- Provided a wide-format export of game and player information as a tab in the Excel data.
+- Enabled a quick switching button between lecturer mode and new games for better transitions.
+
 
 Release 3.6
 -----------
