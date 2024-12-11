@@ -270,7 +270,7 @@ Radioline
 .. image:: _static/elements/radioline2.png
     	:width: 49%
 
-Radiolines, like Likert scales, offer stepwise input. Settings are
+Radiolines, like Likert scales, offer stepwise input. The Settings are
 
 minimum and maximum
 	The first bullet of the slider is the minimum value, the last the maximum values. For each bullet the value increases by one. In the example, a minimum of 0 and a maximum of 10 give 11 input possibilities.
@@ -394,7 +394,7 @@ Winner's Notification
 .. image:: _static/elements/notification.png
 	:width: 50%
 
-If a game is played with real payoffs, this element displays the payoff code to participants and the respective payoff. The payoff can be a number or also a text (e.g. two tickets for the theater). The element automatically provides a legal disclaimer. The payoff notice can be changed. Also the currency of the payoff can be changed under `course data`_.
+If a game is played with real payoffs, this element displays the payoff code to participants and the respective payoff. The payoff can be a number or also text (e.g. two tickets for the theater). The element automatically provides a legal disclaimer. The payoff notice can be changed. Also the currency of the payoff can be changed under `course data`_.
 
 .. image:: _static/elements/notfication.png
     :height: 300px
@@ -402,7 +402,7 @@ If a game is played with real payoffs, this element displays the payoff code to 
 A winning notification is necessary for games with monetary payoff. The participants who are randomly drawn receive a winning notification as well as a code to cash in their earnings. 
 
 payoff(variable) in €
-	The amount of earnings can be determined by this setting. You can enter a fixed amount or you can enter a variable that is calculated beforehand. If, for example, the variable :php:`$payoff` is calculated in a program during the game, you can enter :php:`$payoff;` in the earnings field.
+	The amount of earnings can be determined by this setting. You can enter a fixed amount or a variable that is calculated beforehand. If, for example, the variable :php:`$payoff` is calculated in a program during the game, you can enter :php:`$payoff;` in the earnings field.
 
 text if drawn
 	The default text is: You were randomly drawn and get your payoff. Please remember the payoff code and the amount and go the lecturer's office.
