@@ -107,7 +107,7 @@ This appears like this in classEx:
 
 You can find an overview with different tutorials here: https://www.w3.org/Math/#learn
 
-In case your browser does not directly support MathML, here is a tutorial on how to work with it anyway: https://developer.mozilla.org/en-US/docs/Web/MathML/Authoring
+In case your browser does not directly support MathML, here is a tutorial on how to work with it nevertheless: https://developer.mozilla.org/en-US/docs/Web/MathML/Authoring
 
 
 
@@ -120,7 +120,7 @@ Element Reference
 
 In order to avoid redundancies, you can reference elements and add them in a different place in the game (instead of copying them directly). This place has to be after or in the same stage as the original element is. For this, you can use the reference element. If the original element is altered, the reference is adapted automatically. The reference is created by selecting the stage number and the element number you are referring to. 
 
-.. note:: If you require the same text in two stages, for example, an element reference is a far more elegant version than a simple copy because any changes to the original element are adopted automatically. Also a reference objects in a participant field can just link to another participant opject (the same principle holds for the lecturer fields).
+.. note:: For example if you require the same text in two stages, an element reference is a far more elegant version than a simple copy because any changes to the original element are adopted automatically. Also a reference objects in a participant field can just link to another participant opject (the same principle holds for the lecturer fields).
 
 .. note:: Please notice that the display condition is not taken from the referenced element but from the reference itself.
 
