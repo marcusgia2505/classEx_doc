@@ -99,7 +99,7 @@ It is also possible to display symbols and indices like in this exemple:
 	<msub><mi>&pi;</mi><mn>i</mn></msub>
 </math>
 
-Which appears like this in classEx:
+This appears like this in classEx:
 
 .. image:: _static/elements/MathML2.PNG
 
