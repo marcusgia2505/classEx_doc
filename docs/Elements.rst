@@ -186,7 +186,7 @@ minimum
 	The minimum specifies the minimal value. If the participant enters a value below the minimum a warning is displayed and he or she cannot proceed.
 
 maximum
-	The maximum specifies the maximal value. If the participant enters a value above the maximum a warning is displayed and he or she cannot proceed. (see figure)
+	The maximum specifies the maximal value. If the participant enters a value above the maximum a warning is displayed and he or she cannot proceed (see figure).
 
 decimal place
 	The number of decimal places. classEx automatically rounds accordingly.
