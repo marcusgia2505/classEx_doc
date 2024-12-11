@@ -150,7 +150,7 @@ In this element, you can insert several input fields. These are numbered #1, #2,
 The following settings are available for every input field: 
 
 type of input field
-	The type of input specifies how input should be taken by the input field, like numeric input, discrete choice, sliders, ...
+	The type of input specifies how the input should be taken by the input field, like numeric input, discrete choice, sliders, ...
 
 variable name 
 	The variable name is the identifier of the decision input. The variable is automatically stored in the subjects table. The variable name can then be used in programs. For example, if your variable is called $e, you can access it by writing "$e;" in a text box or use :php:`$e` in a program element. 
