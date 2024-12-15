@@ -511,7 +511,7 @@ Payoff matrix game
 
 
 
-This element helps display the payoff from a two role game easily. This provides a simplification instead of using subjects programs to retrieve the other participant's value and to calculate payoffs. The same can be achieved with text boxes and subjects programs.
+This element helps display the payoff from a two role game. This is a simplification compared to the use of subject programmes to determine the value of the other participant and calculate the payouts. The same can be achieved with text boxes and subjects programs.
 
 decision role 1 and role 2
 	You need to specify which input field contains the decision of the respective participant for the row participant and for the column participant. The labels of the payoff matrix are determined by the specified input fields. 
@@ -528,13 +528,13 @@ Camera
 .. image:: _static/Camera2.PNG
     :width: 30%
 
-With this element, you can enable participants take a picture of themselves.
+With this element, you can enable participants to take a picture of themselves.
 
 variable
 	The variable name, under which the picture is stored, has to be defined. 
 
 allow retake
-	Additionally, you can define if participants are allowed to retake a picture. Then only the last picture taken is saved.
+	You can also specify whether the participants are allowed to take a picture again. Only the last picture taken will then be saved.
 
 
 .. note:: Informed Consent: Participants are asked by the browser if the browser can access the webcam or not. Please make participants aware that they do not have to take a picture and ask them for their consent.
@@ -545,7 +545,7 @@ Retrieving Pictures
 -------------------
 Pictures can be retrieved in the following ways:
 
-At the participant' screen
+At the participant's screen
 	You can use the normal variable notation ($image;) to display pictures in text boxes.
 
 At the lecturer screen
@@ -569,8 +569,8 @@ This element allows you to display the filled in input element of the previous s
 Similarity check(beta)
 ~~~~~~~~~~~~~~~~~~~~~
 
-In this feature, the main part consists of one input field and a textbox to define a variable and get the student’s answer. In the next stage, you can use the predefined variable name and enter the correct solution for comparing the correct solution with the student’s answer.
-You can add a prompt, questions, and sample solution, in the textbox at this stage. Then use the variable name (the one that you defined in the previous stage) to send the student's answer and your prompt to openAI server. As a Response, the AI will send you feedback on the student's answer depending on your given Prompt. In the end, it will show the feedback to the participants.
+In this feature, the main part consists of an input field and a text field to define a variable and get the student's answer. In the next phase, you can use the predefined variable name and enter the correct solution to compare the correct solution with the student's answer.
+You can enter a prompt, questions and a sample solution in the textbox at this stage. Then use the variable name (which you defined in the previous phase) to send the student's answer and your prompt to the openAI server. In response, the AI will send you feedback on the student's response depending on the prompt you provided. At the end, the feedback is displayed to the participants.
 
 In Similarity check, the main part consists of one input field and a textbox to define a variable and get the student’s answer. In the next stage, you can use the predefined variable name and enter the correct solution for comparing the correct solution with the student’s answer.
 .. image:: _static/elements/firststep.png
@@ -581,9 +581,9 @@ There are more options to set by clicking on the additional setting:
 .. image:: _static/elements/additionamset.png
 :width: 15px
 
-It is possible to define different messages to show after the stars rate on the participant screen.
-Also, there are 4 boxes to define star ranges in each game separately.
-Depending on the count of the sentences in the correct solution, the range of the numbers should go higher.
+It is possible to define different messages that are displayed on the participant screen after the star rating.
+There are also 4 boxes that can be used to define a separate star range for each game.
+Depending on the number of sentences in the correct solution, the range of numbers should go higher.
 
 
 .. warning:: Please note that the score ranges have a default value each, if you don’t change it depending on the game, it will use the defined value and there might be a chance of having a wrong result.
