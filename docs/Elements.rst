@@ -614,18 +614,18 @@ OpenAI feedback
 .. image:: _static/AIfeature.PNG
  :width: 50%
 
-The OpenAI feedback element allows you to send a request that includes a student's answer and a specific prompt to the OpenAI server to receive tailored AI-generated feedback. This feedback is crafted based on the provided prompt and is intended for display to students.
+The OpenAI feedback element allows you to send a request that includes a student's answer and a specific prompt to the OpenAI server to receive tailored AI-generated feedback. This feedback is crafted based on the provided prompt and is intended to be displayed to students.
 
-to use the feature you need to Configure the input element, variable name and a textbox for capturing the student's answer in the first stage.
+To use the feature you need to Configure the input element, variable name and a textbox for capturing the student's answer in the first stage.
 In the next stage of the game, you need to use the same input variable that you set previously and define the output variable name(to store the feedback), and the prompt.
-For the prompt, you can define a scenario,questions,sample solution,etc in the textbox.
+For the prompt, you can define a scenario, questions, sample solution, etc in the textbox.
 
 variable
-	Ensure all variable's names are clearly defined and used consistently.
+	Ensure all variable names are clearly defined and used consistently.
 
-	Th content field is associated with the system-level message and provides context or high-level instructions for the conversation. It helps set the tone or guide the behavior of the AI model during the conversation. Please only change this field, if you want to have another role!
+	The content field is associated with the system-level message and provides context or high-level instructions for the conversation. It helps set the tone or guide the behavior of the AI model during the conversation. Please only change this field, if you want to have another role!
 
-	The temperature is a parameter that influences the randomness of the model responses. A higher temperature value results in more varied and creative responses, while a lower value makes the responses more focused and deterministic. It is a measure of how much randomness is introduced into the generated text.
+	Temperature is a parameter that influences the randomness of the model's responses. A higher temperature value leads to more varied and creative answers, while a lower value makes the answers more concentrated and deterministic. It is a measure of how much randomness is introduced into the generated text. 
 
 	Output Storage: store the response of AI(output), without showing it to the participants.
 
@@ -639,20 +639,21 @@ llama3 AI feedback
 .. image:: _static/llamafeedback.PNG
  :width: 50%
 
-The llama3 AI feedback element allows you to send a request that includes a student's answer and a specific prompt to receive tailored AI-generated feedback. This feedback is crafted based on the provided prompt and is intended for display to students.
+The llama3 AI feedback element allows you to send a request that includes a student's answer and a specific prompt to receive tailored AI-generated feedback. This feedback is crafted based on the provided prompt and is intended to be displayed to students.
 
-to use the feature you need to Configure the input element, variable name and a textbox for capturing the student's answer in the first stage.
+LLaMA 3 is an open-source AI model developed by Meta AI, designed to significantly improve natural language understanding and generation, showcasing advancements in performance, efficiency, and scalability.
+
+To use the feature you need to configure the input element, variable name and a textbox for capturing the student's answer in the first stage.
 In the next stage of the game, you need to use the same input variable that you set previously and define the output variable name(to store the feedback), and the prompt.
 For the prompt, you can define a scenario,questions,sample solution,etc in the textbox.
 
 variable
-	Ensure all variable's names are clearly defined and used consistently.
+	Ensure all variable names are clearly defined and used consistently.
 
 	The temperature is a parameter that influences the randomness of the model responses. A higher temperature value results in more varied and creative responses, while a lower value makes the responses more focused and deterministic. It is a measure of how much randomness is introduced into the generated text.
 
 	Output Storage: store the response of AI(output), without showing it to the participants.
 
-	LLaMA 3 is an open-source AI model developed by Meta AI, designed to significantly improve natural language understanding and generation, showcasing advancements in performance, efficiency, and scalability.
 
 Mixtral AI feedback
 ~~~~~~~~~~~~~~~~~~~
@@ -665,12 +666,12 @@ Mixtral AI feedback
 
 The Mixtral AI feedback element allows you to send a request that includes a student's answer and a specific prompt to receive tailored AI-generated feedback. This feedback is crafted based on the provided prompt and is intended for display to students.
 
-to use the feature you need to Configure the input element, variable name and a textbox for capturing the student's answer in the first stage.
+To use the feature you need to configure the input element, variable name and a textbox for capturing the student's answer in the first stage.
 In the next stage of the game, you need to use the same input variable that you set previously and define the output variable name(to store the feedback), and the prompt.
 For the prompt, you can define a scenario,questions,sample solution,etc in the textbox.
 
 variable
-	Ensure all variable's names are clearly defined and used consistently.
+	Ensure all variable names are clearly defined and used consistently.
 
 	The temperature is a parameter that influences the randomness of the model responses. A higher temperature value results in more varied and creative responses, while a lower value makes the responses more focused and deterministic. It is a measure of how much randomness is introduced into the generated text.
 
