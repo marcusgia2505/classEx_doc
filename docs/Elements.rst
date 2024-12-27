@@ -666,18 +666,18 @@ Mixtral AI feedback
 
 The Mixtral AI feedback element allows you to send a request that includes a student's answer and a specific prompt to receive tailored AI-generated feedback. This feedback is crafted based on the provided prompt and is intended for display to students.
 
+Mixtral AI, developed by Mistral AI, harnesses a sparse mixture of experts (SMoE) to deliver unmatched efficiency and superior performance. Licensed under Apache 2.0, this open-source model excels in cost-effective computation, outperforming standard benchmarks and offering a robust solution for advanced AI applications.
+
 To use the feature you need to configure the input element, variable name and a textbox for capturing the student's answer in the first stage.
-In the next stage of the game, you need to use the same input variable that you set previously and define the output variable name(to store the feedback), and the prompt.
-For the prompt, you can define a scenario,questions,sample solution,etc in the textbox.
+In the next stage of the game, you need to use the same input variable that you set previously and define the output variable name (to store the feedback), and the prompt.
+For the prompt, you can define a scenario, questions, sample solution, etc in the textbox.
 
 variable
 	Ensure all variable names are clearly defined and used consistently.
 
-	The temperature is a parameter that influences the randomness of the model responses. A higher temperature value results in more varied and creative responses, while a lower value makes the responses more focused and deterministic. It is a measure of how much randomness is introduced into the generated text.
+	The temperature is a parameter that influences the randomness of the model responses. A higher temperature value results in more varied and creative responses, while a lower value makes the responses more focused and deterministic.
 
 	Output Storage: store the response of AI(output), without showing it to the participants.
-
-	Mixtral AI, developed by Mistral AI, harnesses a sparse mixture of experts (SMoE) to deliver unmatched efficiency and superior performance. Licensed under Apache 2.0, this open-source model excels in cost-effective computation, outperforming standard benchmarks and offering a robust solution for advanced AI applications.
 
 
 
@@ -690,14 +690,15 @@ Progressbar/round
 .. image:: _static/pprogress.PNG
  :width: 50%
 
-It is possible to set the Progressbar/Round in the "assignment & matching" tab of each game. This feature allows you to add either a progress bar or a round counter to each game. By default, this feature is disabled (set to 'none'). When enabled, it will be shown to the participant:\
+It is possible to set the Progressbar/Round in the "assignment & matching" tab of each game. This feature allows you to add either a progress bar or a round counter to each game. By default, this feature is disabled (set to 'none'). When enabled, the following will be shown to the participant:
+
 Percentage Progress Bar: Displays how much of the game has been completed.
 
 Page Number Progress Bar: Shows the number of completed stages.
 
 Round Counter: Shows the number of completed rounds.
 
-Only one option can be active at a time to ensure clarity for participants.
+Only one option can be active at one time to ensure clarity for participants.
 
 
 
