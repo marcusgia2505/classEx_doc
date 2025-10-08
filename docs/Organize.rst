@@ -115,7 +115,7 @@ Repository
 
 The repository lists all public games created by you and other lecturers and allows you to import these games to your account. You can enter the repository by clicking on the *repository* button in the top bar of the overview. 
 
-If you do not want your game to be listed in the repository you have to change its status from public to private. 
+If you do not want your game to be listed in the repository, you have to change its status from public to private. 
 
 .. image:: _static/repositorylist.PNG
     :alt:  300px
@@ -123,7 +123,7 @@ If you do not want your game to be listed in the repository you have to change i
 Search games
 ------------
 
-The repository lists all games which were set public by their owners.
+The repository lists all games which were set to public by their owners.
 It provides easy access to all available games, enabling you to search for and, when needed, import public games created by other users into your own panel. The list has been optimized for improved search speed and usability, ensuring faster performance. Additionally, the search box offers comprehensive searches across all fields, enhancing efficiency and providing a streamlined user experience.
 
 Import games
