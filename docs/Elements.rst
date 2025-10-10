@@ -17,9 +17,9 @@ Text box
 .. image:: _static/elements/text_field2.png
     :width: 49%
 
-The text box is the simplest element. The entered text will be displayed to the participants or a the lecturer screen depending where you place the element. The text box is equipped with a WYSIWG editor which allows you to insert tables, symbols etc. If you double-click into the text element, the WYSIWG editor opens (see left figure). You can switch back to the normal text box by clicking on the **<>** symbol (see right figure). 
+The text box is the simplest element. The entered text will be displayed to the participants or a the lecturer's screen, depending on where you place the element. The text box is equipped with a WYSIWYG editor, which allows you to insert tables, symbols, etc. If you double-click into the text element, the WYSIWYG editor opens (see left figure). You can switch back to the normal text box by clicking on the **<>** symbol (see right figure). 
 
-If you are not in the WYSIWG editor, you can use standard HTML to design your texts. You can do e.g. the following:
+If you are not in the WYSIWG editor, you can use standard HTML to design your texts. You can do, e.g. the following:
 
 .. code:: html
 
@@ -42,12 +42,12 @@ Special     Name 		   Function Example
 =========== ============== ===============
 role1.png   Symbol Role 1  Red participant symbol |pic_role1| is displayed. 
 role2.png   Symbol Role 2  Green participant symbol |pic_role2| is displayed.
-$variable;  Variables      Beside normal text, you can also insert variables into the text box. 
+$variable;  Variables      Besides normal text, you can also insert variables into the text box. 
 =========== ============== ===============
 
 If you have defined variables (see :ref:`Programming:Programming`), you can have these displayed by inserting the character "$", the variable name followed by ";". Make sure not to forget the ";" at the end! Variables and normal text can be combined.
 
-Make sure that role1.png, role2.png,... are followed by a space. Otherwise the figure will not be replaced.
+Make sure that role1.png, role2.png,... are followed by a space. Otherwise, the figure will not be replaced.
 
 .. |pic_role1| image:: _static/pic/role1.PNG
 	:width: 15px
@@ -58,7 +58,7 @@ Make sure that role1.png, role2.png,... are followed by a space. Otherwise the f
 Conditional text
 -----------------
 
-So far we have only tackled how to read the PHP variables and display them in the text field (e.g. $variable;), but sometimes we would like to display conditional text. For example we might have a variable that tells whether a participant is buyer or seller. We can achieve this task by a program element where you define:
+So far, we have only tackled how to read the PHP variables and display them in the text field (e.g. $variable;), but sometimes we would like to display conditional text. For example, we might have a variable that tells whether a participant is a buyer or seller. We can achieve this task by a program element where you define:
 
 .. code:: php
 
@@ -70,7 +70,7 @@ Then you can enter and output $buyerText; in the text box.
 Display formulas
 -----------------
 
-Although classEx does not directly support Latex, it is possible to display formulas to participants in a more elegant way in a text box with MathML. It is best to use the NON WYSIWG editor in the text box. Switching to the WYSIWG version already translates your HTML code into the formula.
+Although classEx does not directly support LaTeX, it is possible to display formulas to participants in a more elegant way in a text box with MathML. It is best to use the NON WYSIWYG editor in the text box. Switching to the WYSIWYG version already translates your HTML code into the formula.
 
 An example - the following HTML code leads to the following formula:
 
@@ -92,7 +92,7 @@ An example - the following HTML code leads to the following formula:
 .. image:: _static/elements/MathML_exemple.PNG
     :width: 30%
 
-It is also possible to display symbols and indices like in this exemple:
+It is also possible to display symbols and indices like in this example:
 
 .. code:: HTML
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -118,9 +118,9 @@ Element Reference
 .. image:: _static/elements/reference.png
     :alt:  300p
 
-In order to avoid redundancies, you can reference elements and add them in a different place in the game (instead of copying them directly). This place has to be after or in the same stage as the original element is. For this, you can use the reference element. If the original element is altered, the reference is adapted automatically. The reference is created by selecting the stage number and the element number you are referring to. 
+In order to avoid redundancies, you can reference elements and add them in a different place in the game (instead of copying them directly). This place has to be after or at the same stage as the original element. For this, you can use the reference element. If the original element is altered, the reference is adapted automatically. The reference is created by selecting the stage number and the element number you are referring to. 
 
-.. note:: For example if you require the same text in two stages, an element reference is a far more elegant version than a simple copy because any changes to the original element are adopted automatically. Also a reference object in a participant field can just link to another participant object (the same principle holds for the lecturer fields).
+.. note:: For example, if you require the same text in two stages, an element reference is a far more elegant version than a simple copy because any changes to the original element are adopted automatically. Also, a reference object in a participant field can just link to another participant object (the same principle holds for the lecturer fields).
 
 .. note:: Please notice that the display condition is not taken from the referenced element but from the reference itself.
 
@@ -129,7 +129,7 @@ In order to avoid redundancies, you can reference elements and add them in a dif
 Program code
 ~~~~~~~~~~~~
 
-Program snippets can be implemented to calculate results for each subjects. For further information see :ref:`Programming:Programming`.
+Program snippets can be implemented to calculate results for each subject. For further information, see :ref:`Programming:Programming`.
 
 .. image:: _static/program.png
 .. role:: php(code)
@@ -145,7 +145,7 @@ Elements for participants
 Input element
 ~~~~~~~~~~~~~
 
-In this element, you can insert several input fields. These are numbered #1, #2, …. You can add input fields by clicking on *add new input field*. The input fields are displayed one after each other. Input elements always provide a submit button automatically. In the following, the different types of input fields are described in more detail.
+In this element, you can insert several input fields. These are numbered #1, #2,… You can add input fields by clicking on *add new input field*. The input fields are displayed one after another. Input elements always provide a submit button automatically. In the following, the different types of input fields are described in more detail.
 
 The following settings are available for every input field: 
 
@@ -163,7 +163,7 @@ Furthermore, you can delete an input field by clicking on |pic_delete| or provid
 .. |pic_display| image:: _static/pic/show.png
 				:width: 15px
 
-.. warning:: Please notice that only one input element is allowed per stage. For several inputs add additional input fields to the first input element.
+.. warning:: Please notice that only one input element is allowed per stage. For several inputs, add additional input fields to the first input element.
 
 .. note:: In all input fields, you can also use variables instead of numbers or text. This can e.g. be useful if you want to set a maximum depending on a variable :php:`$x`. Just enter $x; in the maximum field. This holds true for other fields as well.
 
@@ -177,16 +177,16 @@ Numeric input field
 .. image:: _static/elements/numeric2.png
     	:width: 49%
 
-The numeric input stores numeric input by participants and provides a basic check (minimum, maximum). It automatically rounds the input to a given decimal place and allows for input of digits with as :php:`2.34` or :php:`2,34`. classEx also automatically changes the input to numeric on mobile devices and shows the correct keyboard.
+The numeric input stores the numeric input by participants and provides a basic check (minimum, maximum). It automatically rounds the input to a given decimal place and allows for input of digits with as :php:`2.34` or :php:`2,34`. classEx also automatically changes the input to numeric on mobile devices and shows the correct keyboard.
 
 text
 	The text is displayed on top of the input field. 
 
 minimum
-	The minimum specifies the minimal value. If the participant enters a value below the minimum a warning is displayed and he or she cannot proceed.
+	The minimum specifies the minimal value. If the participant enters a value below the minimum, a warning is displayed, and he or she cannot proceed.
 
 maximum
-	The maximum specifies the maximal value. If the participant enters a value above the maximum a warning is displayed and he or she cannot proceed (see figure).
+	The maximum specifies the maximum value. If the participant enters a value above the maximum, a warning is displayed, and he or she cannot proceed (see figure).
 
 decimal place
 	The number of decimal places. classEx automatically rounds accordingly.
@@ -201,7 +201,7 @@ required
 	This determines whether input is mandatory. In this case, participants cannot proceed without entering a value. 
 
 output only
-	This means that the field is read-only. Still, the value of the field is stored as normal variable. It can e.g. be used to provide :ref:`Programming:Live feedback on input` with javascript.
+	This means that the field is read-only. Still, the value of the field is stored as a normal variable. It can, e.g. be used to provide :ref:`Programming:Live feedback on input` with JavaScript.
 
 
 Buttons, simple list and drop list (single choice)
@@ -210,7 +210,7 @@ Buttons, simple list and drop list (single choice)
 .. image:: _static/develop/buttons.PNG
    :height: 500px
 
-Those three types of input fields are used for discrete decisions. You can implement single choice questions using buttons (first figure below), simple lists (second figure) or drop lists (third figure). This is what they look like in the participants' display. The settings are the same for these input fields.
+Those three types of input fields are used for discrete decisions. You can implement single-choice questions using buttons (first figure below), simple lists (second figure) or drop lists (third figure). This is what they look like in the participants' display. The settings are the same for these input fields.
 
 .. image:: _static/ButtonsAndSelection3.JPG
     :width: 30%
@@ -223,10 +223,10 @@ text
 	The text is displayed on top of the input field. 
 
 default
-	The default value is pre-marked at the start. For buttons it is highlighted with a color. For drop lists it is preselected.
+	The default value is pre-marked at the start. For buttons, it is highlighted with a colour. For drop lists, it is preselected.
 
 required
-	This determines whether input is mandatory. In this case, participants cannot proceed before making a choice. For button 	 input you can set that only the correct answer allows to proceed.
+	This determines whether input is mandatory. In this case, participants cannot proceed before making a choice. For button input, you can set that only the correct answer allows proceeding.
 
 order of options
 	The order of options can be set to *as stated* or to *random*. In the latter case, the random order is determined separately for each participant.
@@ -234,7 +234,7 @@ order of options
 options
 	Options can be defined in the lower area of the element. Participants make a decision by choosing one of the options. The order of options can be altered by clicking on the arrow. You can also delete or add options. 
 
-	Options come with a displayed text and with a value. The value is stored in the data and as variable.
+	Options come with a displayed text and a value. The value is stored in the data and as a variable.
 
 	You can mark the correct answer by clicking on the symbol |pic_check.png|. In this case, if you use the single/multiple choice result element for the lecturer, the correct answer is marked there.
 
@@ -251,15 +251,15 @@ Checkboxes (multiple choice)
 .. image:: _static/elements/multiple2.png
     	:width: 49%
 
-Choosing multiple options is possible by using checkboxes. Checkboxes work in exactly the same way as single choice options shown above. Only the form of display is slightly different, as these are displayed as a list from which participants can pick several options. This way, multiple inputs can occur in one stage. Additionally to the single choice, you can specify the following settings:
+Choosing multiple options is possible by using checkboxes. Checkboxes work in exactly the same way as single-choice options shown above. Only the form of display is slightly different, as these are displayed as a list from which participants can pick several options. This way, multiple inputs can occur in one stage. In addition to the single choice, you can specify the following settings:
 
 minimum and maximum number of choices and 
 	This restricts how many options can be picked by the participant.
 
 number of answers per row
-	This states how many options are displayed in each row (here 2).
+	This states how many options are displayed in each row (here, 2).
 
-.. important:: Multiple choice inputs are stored separated with :php:`_`, e.g. :php:`2_3` if options with value 2 and 3 were selected. If you specify a default, please specify it accordingly. 
+.. important:: Multiple choice inputs are stored separated with :php:`_`, e.g. :php:`2_3` if options with values 2 and 3 were selected. If you specify a default, please specify it accordingly. 
 
 
 Radioline
@@ -273,7 +273,7 @@ Radioline
 Radiolines, like Likert scales, offer stepwise input. The Settings are
 
 minimum and maximum
-	The first bullet of the slider is the minimum value, the last the maximum values. For each bullet the value increases by one. In the example, a minimum of 0 and a maximum of 10 give 11 input possibilities.
+	The first bullet of the slider is the minimum value, and the last is the maximum value. For each bullet, the value increases by one. In the example, a minimum of 0 and a maximum of 10 give 11 input possibilities.
 
 default
 	The default value is pre-marked at the start.
@@ -282,10 +282,10 @@ required
 	This determines whether input is mandatory. In this case, participants cannot proceed before making a choice.
 	
 label options
-	You can show all labels, which are then shown with rotated text below the radioline. Or you can show only right and left label. If you choose this option intermediate labels are ignored.
+	You can show all labels, which are then shown with rotated text below the radioline. Or you can show only the right and left labels. If you choose this option, intermediate labels are ignored.
 
 Label of the radioline values
-	You can add a labels to each value of the radioline. Make sure that you specify the correct value. 
+	You can add labels to each value of the radioline. Make sure that you specify the correct value. 
 	
 .. important:: The labels are only shown if you specify the correct value. E.g. if the radioline goes from 0 to 10 and you want a label at the very left, it has to have the value 0. If you choose the option to show only min/max labels, intermediate labels are ignored.
 
@@ -303,7 +303,7 @@ minimum and maximum
 	The minimum and maximum determine the range of the slider.
 
 number of steps
-	The number of steps determines to how many position the slider can be moved. In the example, 20 steps between 0 and 10 mean that each step increase by 0.5. 
+	The number of steps determines how many positions the slider can be moved. In the example, 20 steps between 0 and 10 mean that each step increases by 0.5. 
 
 default
 	The default value is pre-marked at the start. If no default is set, the slider is positioned in the middle of the range.
@@ -321,10 +321,10 @@ Text input
 .. image:: _static/elements/text2.png
     	:width: 49%
 
-Text input fields allow participants to enter a text. If a maximum is specified, it shows the number of remaining characters. 
+Text input fields allow participants to enter text. If a maximum is specified, it shows the number of remaining characters. 
 
 minimum and maximum number of characters
-	This limits the amount of characters which can be written by participants.
+	This limits the number of characters which can be written by participants.
 
 default
 	The default value is written in the text input field.
@@ -336,13 +336,13 @@ number of rows
 Hidden field
 -------------
 
-The hidden fields allows to save values. The only setting is to provide a default.
+The hidden fields allow for saving values. The only setting is to provide a default.
 
 
 Next button
 ------------
 
-The next button allows to add an additional button. Note that classEx normally provides buttons automatically. This may be useful, if you have no input but only a button. The only setting is the label of the button.
+The next button allows you to add an additional button. Note that classEx normally provides buttons automatically. This may be useful if you have no input but only a button. The only setting is the label of the button.
 
 
 Other input fields
@@ -359,10 +359,10 @@ Additional settings
     	:width: 100%
 
 
-At the bottom of each input element you can find additional settings which open by clicking on *additional settings*.
+At the bottom of each input element, you can find additional settings which open by clicking on *additional settings*.
 
 button label
-	Here you can specify the label of the button. The default is "Submit". This button label is only used, if there is an own button for submitting your decision. E.g. in *Buttons (single choice)* buttons are labeled with the possible answers the editor inserted.
+	Here you can specify the label of the button. The default is "Submit". This button label is only used if there is an own button for submitting your decision. E.g. in *Buttons (single choice)*, buttons are labelled with the possible answers the editor inserted.
 
 confirmation message
 	If you enter a text here, participants are asked for confirmation before submitting. E.g. you can enter "Are you sure?" which is then displayed together with an OK button to participants.
@@ -371,7 +371,7 @@ hide decision after submitting
 	After submitting, participants see a confirmation message and their input. If you switch this setting on, the input is not displayed anymore after submitting.
 
 directly to next stage
-	Normally participants are moved to the next stage by the experimenter (see `Start button and automatic start`_). If participants play individually and this settings is switched on, they move autonomously to the next stage. In this case, you have to select *no forwarding* if you use an automatic start.
+	Normally, participants are moved to the next stage by the experimenter (see `Start button and automatic start`_). If participants play individually and this setting is switched on, they move autonomously to the next stage. In this case, you have to select *no forwarding* if you use an automatic start.
 
 
 show button later
@@ -381,10 +381,10 @@ allow resending the input
 	The input is not blocked after sending, but inputs can be resubmitted as long as the stage is active.
 	
 space between input fields (px)
-	This allows to add a certain space in pixels between input fields.
+	This allows you to add a certain space in pixels between input fields.
 	
 highlight button
-	The send button can be highlighted in blue color.
+	The send button can be highlighted in blue.
 
 
 
@@ -394,7 +394,7 @@ Winner's Notification
 .. image:: _static/elements/notification.png
 	:width: 50%
 
-If a game is played with real payoffs, this element displays the payoff code to participants and the respective payoff. The payoff can be a number or also text (e.g. two tickets for the theater). The element automatically provides a legal disclaimer. The payoff notice can be changed. Also the currency of the payoff can be changed under `course data`_.
+If a game is played with real payoffs, this element displays the payoff code to participants and the respective payoff. The payoff can be a number or also text (e.g. two tickets for the theater). The element automatically provides a legal disclaimer. The payoff notice can be changed. Also, the currency of the payoff can be changed under `course data`_.
 
 .. image:: _static/elements/notfication.png
     :height: 300px
@@ -405,7 +405,7 @@ payoff(variable) in €
 	The amount of earnings can be determined by this setting. You can enter a fixed amount or a variable that is calculated beforehand. If, for example, the variable :php:`$payoff` is calculated in a program during the game, you can enter :php:`$payoff;` in the earnings field.
 
 text if drawn
-	The default text is: You were randomly drawn and get your payoff. Please remember the payoff code and the amount and go the lecturer's office.
+	The default text is: You were randomly drawn and get your payoff. Please remember the payoff code and the amount, and go to the lecturer's office.
 
 text if not drawn
 	The default text is: You were not randomly drawn to be paid out.
@@ -414,13 +414,13 @@ text if drawn and payoff = 0
 	The default text is: You were randomly drawn, but your payoff is X. It is therefore not paid out.
 
 
-.. important:: The winning notification can only be displayed if you also define a `Winner's draw`_ on the lecturer side. Otherwise no winner can be determined. Winners are always drawn with a lecturer element.
+.. important:: The winning notification can only be displayed if you also define a `Winner's draw`_ on the lecturer side. Otherwise, no winner can be determined. Winners are always drawn with a lecturer element.
 
 
 Contract
 ~~~~~~~~
 
-With this element you can enable participants to conclude contracts. By adjusting the settings, you can customize the contract to your needs. Contracts can be used to trade a commodity between subjects in real time. Subjects move around in the classroom and talk to each other. When they agreed on a price, they enter it into the input mask together with the signature of the counterpart (see seller screen). The counterpart has to accept the trade (or reject it, see buyer screen).
+With this element, you can enable participants to conclude contracts. By adjusting the settings, you can customize the contract to your needs. Contracts can be used to trade a commodity between subjects in real time. Subjects move around in the classroom and talk to each other. When they agreed on a price, they enter it into the input mask together with the signature of the counterpart (see seller screen). The counterpart has to accept the trade (or reject it, see buyer screen).
 
 **The screen for the seller**
 
@@ -434,7 +434,7 @@ With this element you can enable participants to conclude contracts. By adjustin
 
 
 
-The contracts made can be shown at the lecturer's screen with the `Contract table`_. In addition, there are special functions in globals and subjects programs to retrieve contracts (see :ref:`Programming:Programming`). All contracts are also stored in the standard excel file which can be retrieved in the data menu (see :ref:`Run:Data`). 
+The contracts made can be shown at the lecturer's screen with the `Contract table`_. In addition, there are special functions in globals and subjects programs to retrieve contracts (see :ref:`Programming:Programming`). All contracts are also stored in the standard Excel file, which can be retrieved in the data menu (see :ref:`Run:Data`). 
 
 
 .. image:: _static/elements/buyer_setting.png
@@ -447,10 +447,10 @@ sell offers/buy offers
 	If you turn this on, you allow for sell or buy offers made by the respective subject.
 
 set quantities
-	Allows to set quantities (otherwise quantity is always 1). With quantities, prices are set as price/unit.
+	Allows setting quantities (otherwise quantity is always 1). With quantities, prices are set as price/unit.
 
 hide ID
-	allows to disable the ID. The ID is needed for sell and buy offers to be send to a specific person. E.g. if the buyer can make buy offers, she needs the ID of the seller to send the offer to.
+	allows to disable the ID. The ID is needed for sell and buy offers to be sent to a specific person. E.g. if the buyer can make buy offers, she needs the ID of the seller to send the offer to.
 
 	.. note:: Contract elements use the subject ID as ID for trading (because it is very short). But contracts are stored with the internal participant ID.
 
@@ -458,13 +458,13 @@ public
 	If you activate this, offers are made to all other subjects who can accept them. This feature is still in a beta version. So test it with care.
 
 max # contracts
-	Maximum number of (accepted) contracts limits how many contracts can be made by a subject.
+	The maximum number of (accepted) contracts limits how many contracts can be made by a subject.
 
 currency/min price/max price/decimal place
 	Currency of the prices and minimum, maximum and decimal places can be specified here.
 
 maximum quantity
-	Maximum quantity a subject is allowed to possess. Limits how many items can be bought.
+	The maximum quantity a subject is allowed to possess. Limits how many items can be bought.
 
 products
 	You can specify a name (or a small image) and the initial amount of the good (e.g. the seller has 1 unit, the buyer 0 units).
@@ -478,13 +478,13 @@ retractable
 	This determines if an offer can be withdrawn or not. The default is that offers can be withdrawn.
 	
 concurrent offers
-	In case of public offers, this determines if more offers can be made at the same time. Note that this is only checked for the respective contract element. If you provide more contract elements to the same persons the check is only made for each contract element.
+	In case of public offers, this determines if more offers can be made at the same time. Note that this is only checked for the respective contract element. If you provide more contract elements to the same persons, the check is only made for each contract element.
 
 message
 	You can provide a static message (e.g. about the buyer type) with the contract.
 
 proprietary trading
-	This allows to sell to or buy from yourself.
+	This allows you to sell to or buy from yourself.
 
 label price
 	The label price can be changed, e.g. to wage. The label is shown in the price field if the field is empty.
@@ -496,7 +496,7 @@ label /unit
 	The label /unit can be changed, e.g. to /hour. The label is shown at the price input field.
 
 permit
-	If you enter a text or a number here, contracts can only be concluded if you enter the number.
+	If you enter a text or a number here, contracts can only be concluded if you enter a number.
 
 
 Payoff matrix game
@@ -511,13 +511,13 @@ Payoff matrix game
 
 
 
-This element helps display the payoff from a two role game. This is a simplification compared to the use of subject programmes to determine the value of the other participant and calculate the payouts. The same can be achieved with text boxes and subjects programs.
+This element helps display the payoff from a two-role game. This is a simplification compared to the use of subject programmes to determine the value of the other participant and calculate the payouts. The same can be achieved with text boxes and subjects programs.
 
 decision role 1 and role 2
 	You need to specify which input field contains the decision of the respective participant for the row participant and for the column participant. The labels of the payoff matrix are determined by the specified input fields. 
 
 results matrix
-	In the table, you enter the payoff for the row participant first followed by the payoff for the column participant. The payoff is stored as variable $payoff; which can then be used for the winning notification or further calculations.
+	In the table, you enter the payoff for the row participant first, followed by the payoff for the column participant. The payoff is stored as variable $payoff; which can then be used for the winning notification or further calculations.
 
 
 Camera
@@ -548,21 +548,21 @@ Pictures can be retrieved in the following ways:
 At the participant's screen
 	You can use the normal variable notation ($image;) to display pictures in text boxes.
 
-At the lecturer screen
+At the lecturer's screen
 	You can use :php:`$getValues(...)` to retrieve the pictures of all participants and display them (see :ref:`Programming:Functions`).
 
 From the stored data
-	In the downloaded data you find stored images in the subjects table. They are base64 decoded and can be encoded with free online tools. Just take away "data:image/jpeg;base64," from the string, so that it starts e.g. with "/9j/....".
+	In the downloaded data, you find stored images in the subjects table. They are base64 decoded and can be encoded with free online tools. Just take away "data:image/jpeg;base64," from the string, so that it starts e.g. with "/9j/....".
 
 Javascript program
 ~~~~~~~~~~~~~~~~~~~
 
-You can also add small javascript programs to the participant screen. More information can be found at :ref:`Programming:Javascript`.
+You can also add small JavaScript programs to the participant screen. More information can be found at :ref:`Programming:Javascript`.
 
 Filled in form 
 ~~~~~~~~~~~~~~
 
-This element allows you to display the filled in input element of the previous stage. This element is outdated and should only be used with care.
+This element allows you to display the filled-in input element of the previous stage. This element is outdated and should only be used with care.
 
 
 
@@ -570,25 +570,25 @@ Similarity check(beta)
 ~~~~~~~~~~~~~~~~~~~~~
 
 In this feature, the main part consists of an input field and a text field to define a variable and get the student's answer. In the next phase, you can use the predefined variable name and enter the correct solution to compare the correct solution with the student's answer.
-You can enter a prompt, questions and a sample solution in the textbox at this stage. Then use the variable name (which you defined in the previous phase) to send the student's answer and your prompt to the openAI server. In response, the AI will send you feedback on the student's response depending on the prompt you provided. At the end, the feedback is displayed to the participants.
+You can enter a prompt, questions and a sample solution in the textbox at this stage. Then use the variable name (which you defined in the previous phase) to send the student's answer and your prompt to the OpenAI server. In response, the AI will send you feedback on the student's response depending on the prompt you provided. At the end, the feedback is displayed to the participants.
 
-In Similarity check, the main part consists of one input field and a textbox to define a variable and get the student’s answer. In the next stage, you can use the predefined variable name and enter the correct solution for comparing the correct solution with the student’s answer.
+In the Similarity check, the main part consists of one input field and a textbox to define a variable and get the student’s answer. In the next stage, you can use the predefined variable name and enter the correct solution to compare the correct solution with the student’s answer.
 .. image:: _static/elements/firststep.png
 :width: 15px
 .. image:: _static/elements/variablesimilarity.png
 :width: 15px
-There are more options to set by clicking on the additional setting:
+There are more options to set by clicking on the additional settings:
 .. image:: _static/elements/additionamset.png
 :width: 15px
 
-It is possible to define different messages that are displayed on the participant screen after the star rating.
+It is possible to define different messages that are displayed on the participant's screen after the star rating.
 There are also 4 boxes that can be used to define a separate star range for each game.
 Depending on the number of sentences in the correct solution, the range of numbers should go higher.
 
 
-.. warning:: Please note that the score ranges have a default value each, if you don’t change it depending on the game, it will use the defined value and there might be a chance of having a wrong result.
+.. warning:: Please note that the score ranges have a default value each; if you don’t change it depending on the game, it will use the defined value, and there might be a chance of having a wrong result.
 
-In the end, similarity check calculation method is:
+In the end, the similarity check calculation method is:
 Some of the points obtained from the comparison of each pair of sentences (one sentence from the answer with one sentence from the correct solution)
 
 
@@ -601,7 +601,7 @@ PDF download
  :width: 100%
 
 The PDF Download element integrates a user-friendly button within the game interface, allowing students to download specific parts of the game material in PDF format.
-This feature includes a text field where you can add custom text, such as questions and answers,and other relevant content. Additionally, you can add image tags which will be rendered as images in the final PDF document.
+This feature includes a text field where you can add custom text, such as questions and answers, and other relevant content. Additionally, you can add image tags, which will be rendered as images in the final PDF document.
 Once the content is added, students can easily download it as a PDF document, facilitating access to the material for offline review and study.
 
 
@@ -616,14 +616,14 @@ OpenAI feedback
 
 The OpenAI feedback element allows you to send a request that includes a student's answer and a specific prompt to the OpenAI server to receive tailored AI-generated feedback. This feedback is crafted based on the provided prompt and is intended to be displayed to students.
 
-To use the feature you need to Configure the input element, variable name and a textbox for capturing the student's answer in the first stage.
+To use the feature, you need to configure the input element, variable name and a textbox for capturing the student's answer in the first stage.
 In the next stage of the game, you need to use the same input variable that you set previously and define the output variable name(to store the feedback), and the prompt.
-For the prompt, you can define a scenario, questions, sample solution, etc in the textbox.
+For the prompt, you can define a scenario, questions, a sample solution, etc, in the textbox.
 
 variable
 	Ensure all variable names are clearly defined and used consistently.
 
-	The content field is associated with the system-level message and provides context or high-level instructions for the conversation. It helps set the tone or guide the behavior of the AI model during the conversation. Please only change this field, if you want to have another role!
+	The content field is associated with the system-level message and provides context or high-level instructions for the conversation. It helps set the tone or guide the behavior of the AI model during the conversation. Please only change this field if you want to have another role!
 
 	Temperature is a parameter that influences the randomness of the model's responses. A higher temperature value leads to more varied and creative answers, while a lower value makes the answers more concentrated and deterministic. It is a measure of how much randomness is introduced into the generated text. 
 
@@ -643,9 +643,9 @@ The llama3 AI feedback element allows you to send a request that includes a stud
 
 LLaMA 3 is an open-source AI model developed by Meta AI, designed to significantly improve natural language understanding and generation, showcasing advancements in performance, efficiency, and scalability.
 
-To use the feature you need to configure the input element, variable name and a textbox for capturing the student's answer in the first stage.
+To use the feature, you need to configure the input element, variable name and a textbox for capturing the student's answer in the first stage.
 In the next stage of the game, you need to use the same input variable that you set previously and define the output variable name(to store the feedback), and the prompt.
-For the prompt, you can define a scenario,questions,sample solution,etc in the textbox.
+For the prompt, you can define a scenario, questions, a sample solution, etc, in the textbox.
 
 variable
 	Ensure all variable names are clearly defined and used consistently.
@@ -668,9 +668,9 @@ The Mixtral AI feedback element allows you to send a request that includes a stu
 
 Mixtral AI, developed by Mistral AI, harnesses a sparse mixture of experts (SMoE) to deliver unmatched efficiency and superior performance. Licensed under Apache 2.0, this open-source model excels in cost-effective computation, outperforming standard benchmarks and offering a robust solution for advanced AI applications.
 
-To use the feature you need to configure the input element, variable name and a textbox for capturing the student's answer in the first stage.
-In the next stage of the game, you need to use the same input variable that you set previously and define the output variable name (to store the feedback), and the prompt.
-For the prompt, you can define a scenario, questions, sample solution, etc in the textbox.
+To use the feature, you need to configure the input element, variable name and a textbox for capturing the student's answer in the first stage.
+In the next stage of the game, you need to use the same input variable that you set previously and define the output variable name (to store the feedback) and the prompt.
+For the prompt, you can define a scenario, questions, a sample solution, etc, in the textbox.
 
 variable
 	Ensure all variable names are clearly defined and used consistently.
@@ -710,7 +710,7 @@ Start button and automatic start
 
 The start button is used to initiate a stage. 
 
-.. important:: Each stage requires a start button or an automatic start. If stages have result elements, this is not true as result elements automatically provide a button to start the stage (if no other button is defined).
+.. important:: Each stage requires a start button or an automatic start. If stages have result elements, this is not true, as result elements automatically provide a button to start the stage (if no other button is defined).
 
 There are two alternatives. A start button which has to be clicked by the experimenter or an automatic start.
 
@@ -724,12 +724,12 @@ Start button
 .. image:: _static/elements/startbutton.png
     :width: 70%
 
-The start buttons allows to start stages of a game. It is marked in blue and clearly visible to ease guidance for the lecturer. Before the start of the first stage it additionally states the number of logged in participants (here: 1).
+The start buttons allow you to start stages of a game. It is marked in blue and clearly visible to ease guidance for the lecturer. Before the start of the first stage, it additionally states the number of logged-in participants (here: 1).
 
 .. image:: _static/elements/startbutton2.png
     :width: 70%
 
-After pressing the start button, the stage is started, the button disappears and a counter is shown which counts the number of participants in that stage. In the example it means that there are no red participants (0/0) and one green participant who finished the stage (1/1). Counting can done over all, by role, group or treatment.
+After pressing the start button, the stage is started, the button disappears, and a counter is shown, which counts the number of participants in that stage. In the example, it means that there are no red participants (0/0) and one green participant who finished the stage (1/1). Counting can be done over all, by role, group or treatment.
 
 The start button can be configured according to the own needs.
 
@@ -739,13 +739,13 @@ The start button can be configured according to the own needs.
 button label
 	You can name the button (e.g. Start Trade).
 feature
-	Instead of starting the current stage, you can also use the start button to jump to different stages. In case you jump to the stage where payoffs are distributed this will surpress the distribution. This can be prevented by following the explanation for the setWinner-function in `Functions`_.
+	Instead of starting the current stage, you can also use the start button to jump to different stages. In case you jump to the stage where payoffs are distributed, this will suppress the distribution. This can be prevented by following the explanation for the setWinner-function in `Functions`_.
 confirmation message
-	You can set if a pop-up should appear after clicking to confirm the action.
+	You can set whether a pop-up should appear after clicking to confirm the action.
 round
-	You can set if the current round number should be displayed or not.
+	You can set whether the current round number should be displayed or not.
 stage name
-	You can set if the stage name should be displayed or not.
+	You can set whether the stage name should be displayed or not.
 count
 	You can set the counter which appears after the start button is clicked. It can count decisions (also by role, treatment or group if set).
 
@@ -755,27 +755,27 @@ Automatic start
 .. image:: _static/elements/automatic.png
    :width: 50%
 
-The automatic start button allows you to start stages when subjects finished the previous stage. With this feature, they can move through the game autonomously. 
+The automatic start button allows you to start stages when subjects have finished the previous stage. With this feature, they can move through the game autonomously. 
 
 mode
 	The mode can be set to:
 
-	- start if possible: If a subjects finishes the previous stage, it is forwarded to the next stage.
+	- start if possible: If a subject finishes the previous stage, it is forwarded to the next stage.
 	- wait for all: Subjects are only forwarded if everyone in the group is done with the previous stage.
-	- no forwarding: Subjects are not forwarded (This feature is only used if subjects forward them self by clicking on a button. This can be set in additional settings of the input element).
+	- no forwarding: Subjects are not forwarded (This feature is only used if subjects forward themselves by clicking on a button. This can be set in additional settings of the input element).
 counter
 	Setting this additionally allows you to deactivate the counter completely.
 round
-	You can set if the current round number should be displayed or not.
+	You can set whether the current round number should be displayed or not.
 count
 	You can set the counter which appears after the start button of the previous stage is clicked. It can count decisions (also by role, treatment or group if set).
 stage name
-	You can set if the stage name should be displayed or not.
+	You can set whether the stage name should be displayed or not.
 	
 
-..note:: classEx executes the start element always at the beginning of a new stage. If you e.g. want to forward all members of a group from stage 2 to stage 3 as soon as all of them made their decision, you have to implement an automatic start button set to "wait for all" at the beginning of stage 3.
+..note:: classEx executes the start element always at the beginning of a new stage. If you, e.g. want to forward all members of a group from stage 2 to stage 3 as soon as all of them have made their decision, you have to implement an automatic start button set to "wait for all" at the beginning of stage 3.
 
-..note:: If you use an automatic start in a stage, you can not use globals programs in this stage as participants move autonomously through the game and the globals program is only called once.
+..note:: If you use an automatic start in a stage, you can not use globals programs in this stage, as participants move autonomously through the game and the globals program is only called once.
 
 
 Winner's draw
@@ -784,11 +784,11 @@ Winner's draw
 .. image:: _static/elements/winnersdraw.png
     :width: 70%
 
-This element should be implemented in the last stage and draws a winner among all participants. The earnings have to be calculated individually on the participant side (see `Winner's notification`_ for participants). You should draw winners only once in a game as the payoff codes do not distinguish between rounds.
+This element should be implemented in the last stage and draw a winner among all participants. The earnings have to be calculated individually on the participant side (see `Winner's notification`_ for participants). You should draw winners only once in a game, as the payoff codes do not distinguish between rounds.
 
 
 method
-	You can determine whether single participants or coupled participants shall be drawn. Drawing coupled participants only makes sense if you have defined roles. For games with two roles it is advisable to draw coupled participants as winners because the possibility that only one of the two participants could be drawn might overshadow considerations of fairness or reciprocity. 
+	You can determine whether single participants or coupled participants shall be drawn. Drawing coupled participants only makes sense if you have defined roles. For games with two roles, it is advisable to draw coupled participants as winners because the possibility that only one of the two participants could be drawn might overshadow considerations of fairness or reciprocity. 
 
 number
 	You can also decide how many participants or groups you want to draw.
@@ -797,7 +797,7 @@ number
 
 .. note:: Experience has shown that earnings of less than 5€ are usually not cashed in. Therefore, games should be calibrated in a way that ensures that earnings are at least 10€.
 
-.. important:: Winners are only drawn from participants who made a decision to avoid inactive participants to be drawn. Therefore it does not make any sense to put the winners' draw in the first stage.
+.. important:: Winners are only drawn from participants who made a decision to avoid inactive participants from being drawn. Therefore, it does not make any sense to put the winners' draw in the first stage.
 
 
 Lecturer discrete choice
@@ -805,7 +805,7 @@ Lecturer discrete choice
 
 .. image:: _static/elements/lecturerdiscrete.png
 
-With this element the lecturer/experimenter can make decisions for all participants during the game, e.g. tossing a coin in front of the class and entering the value in classEx so that payoffs can be calculated based on the coin toss.
+With this element, the lecturer/experimenter can make decisions for all participants during the game, e.g. tossing a coin in front of the class and entering the value in classEx so that payoffs can be calculated based on the coin toss.
 
 .. image:: _static/Randomdraw.PNG
     :width: 70%
@@ -817,7 +817,7 @@ variable name
 	The value will be saved under this name as a global variable and can be retrieved by that name.
 
 for each participant
-	If you switch this on, you can set the value for each participant separately. The value will be stored as a global variable in an array with the participant ID as index.
+	If you switch this on, you can set the value for each participant separately. The value will be stored as a global variable in an array with the participant ID as the index.
 
 default
 	You can set a default.
@@ -826,14 +826,14 @@ options
 	You can specify options with different values.
 
 update
-	If you switch on the update, the element will check every two second if new participants arrived (only necessary when you switched on "for each participant").
+	If you switch on the update, the element will check every two seconds if new participants have arrived (only necessary when you switched on "for each participant").
 
 Contract table
 ~~~~~~~~~~~~~~
 
 
 
-With this element, all contracts that were concluded by participants as well as a chart and the average are displayed on the lecturer's screen. In the contract table, you have several tabs where you can switch between. You can see them in the figures below. 
+With this element, all contracts that were concluded by participants, as well as a chart and the average, are displayed on the lecturer's screen. In the contract table, you have several tabs that you can switch between. You can see them in the figures below. 
 
 The first tab lists the contracts for each round separately. If set, you can also display seller costs and buyer values along with the contract.
 
@@ -852,7 +852,7 @@ The tab *chart*	shows contracts made over time. In case of different quantities,
 .. image:: _static/Ctable3.PNG
     :alt:  300p
 
-The tab *prediction* shows a predicition (if set). To create a prediction the variables :php:`$demand` and :php:`$supply` have to be filled in a global program. :php:`$supply` and :php:`$demand` should be arrays which contain prices as index and the resulting quantity as a value.
+The tab *prediction* shows a prediction (if set). To create a prediction, the variables :php:`$demand` and :php:`$supply` have to be filled in a global program. :php:`$supply` and :php:`$demand` should be arrays which contain prices as indices and the resulting quantity as a value.
 
 .. image:: _static/Ctable1.PNG
     :alt:  300p
@@ -870,7 +870,7 @@ label seller/buyer/price
 	All labels in the table can be changed according to needs.
 
 label seller value/buyer value
-	If these are left empty, the columns seller value or buyer value are not displayed. If a text is provided, columns are labeled with the text and classEx reads the value array to provide seller/buyer values.
+	If these are left empty, the columns seller value or buyer value are not displayed. If a text is provided, columns are labelled with the text, and classEx reads the value array to provide seller/buyer values.
 
 profit variables
 	Can be left empty.
@@ -881,15 +881,15 @@ show quantities
 Result element
 ~~~~~~~~~~~~~~~
 
-For displaying the results of a game various types of charts are available. 
+For displaying the results of a game, various types of charts are available. 
 
 .. important:: Note that you can only display saved subject variables. Decisions for input fields are saved automatically so that they can be displayed as well.
 
-Whenever you can select variables in a field you only need to insert the variable name (e.g. "payoff"). If you want to use variables in other settings (e.g. the maximum) you have to use the standard notation (e.g. "$payoff;"), which gives the value of the variable.
+Whenever you can select variables in a field, you only need to insert the variable name (e.g. "payoff"). If you want to use variables in other settings (e.g. the maximum), you have to use the standard notation (e.g. "$payoff;"), which gives the value of the variable.
 
-For most result elements you can change the setting for *count*. By this you can determine whether results shall be displayed separately for groups, treatments or roles (if defined). 
+For most result elements, you can change the setting for *count*. By this, you can determine whether results shall be displayed separately for groups, treatments or roles (if defined). 
 
-Results single / multiple choice questions
+Results single/multiple choice questions
 ------------------------------------------
 
 .. image:: _static/elements/mc.png
@@ -906,13 +906,13 @@ variable
 	Provide the name of the subjects variable.
 
 show element
-	Always display element or only if stage is activated.
+	Always display the element, or only if the stage is activated.
 
 round
 	Select if only the current round or all rounds should be displayed.
 
 count
-	Participants are counted all together (or per treatment / role / group).
+	Participants are counted altogether (or per treatment/role/group).
 
 
 Results histogram
@@ -921,7 +921,7 @@ Results histogram
 .. image:: _static/elements/histogram_screen.png
     :alt:  300p
 
-The histogram draws the distribution of a variable. The black line marks the mean. Decisions are clustered into so called bins (here bins of 5). The graph allows for zooming and for adjusting the bin size and the maximum.
+The histogram draws the distribution of a variable. The black line marks the mean. Decisions are clustered into so-called bins (here bins of 5). The graph allows for zooming and for adjusting the bin size and the maximum.
 
 .. image:: _static/elements/histogram_screen_new.PNG
     :alt:  300p
@@ -932,16 +932,16 @@ variable
 	Choose which variable you want to display.
 
 show element
-	Element is always displayed, only if stage is activated or if it is activated and after.
+	Element is always displayed, only if the stage is activated or if it is activated and after.
 
 min
-	Minimum of the histogram (Default 0).
+	The minimum of the histogram (Default 0).
 
 max
-	Maximum of the histogram.
+	The maximum of the histogram.
 
 size of bins
-	How the values shall be pooled into *bins*. For example, if you define the bin 10, the data will be pooled in brackets of ten.
+	How the values shall be pooled into *bins*. For example, if you define the bin 10, the data will be pooled in groups of ten.
 
 label x-axis
 	The label you choose for the x-axis is displayed below the x-axis.
@@ -953,7 +953,7 @@ round
     Select if only the current round or all rounds should be displayed.
 
 count
-	Participants are counted all together or per treatment / role / group.
+	Participants are counted altogether or per treatment/role / group.
 
 
 .. note:: All values that are larger than the displayed maximum value are automatically pooled into the last bin.
@@ -964,7 +964,7 @@ Results Line Chart
 .. image:: _static/elements/linechart_pgg.png
     :alt:  300p
 
-A line chart enables the display of the results of several rounds. The line chart automatically calculates the average of the input variable over all subjects. If the input variable is a discrete choice variable, the result is displayed in percent of choices. In the example, you can see a public goods game with three groups. The graph allows for zooming.
+A line chart enables the display of the results of several rounds. The line chart automatically calculates the average of the input variable over all subjects. If the input variable is a discrete choice variable, the result is displayed as a percentage of choices. In the example, you can see a public goods game with three groups. The graph allows for zooming.
 
 
 .. image:: _static/elements/linechart.png
@@ -975,15 +975,15 @@ The following settings are available:
 variable
 	The variable which should be displayed. 
 minimum/maximum/label x-axis
-	Minimum, maximum and label of x-axis
+	Minimum, maximum and label of the x-axis
 minimum/maximum/label y-axis
-	Minimum, maximum and label of y-axis
+	Minimum, maximum and label of the y-axis
 show element
-	Always display element or only if stage is activated.
+	Always display the element, or only if the stage is activated.
 input with array (globals)
-	If you provide the name of a globals variable here, the variable setting is overwritten and data are taken directly from the globals array. The array should have the x-value as index and the respective y-value. 
+	If you provide the name of a globals variable here, the variable setting is overwritten and the data is taken directly from the globals array. The array should have the x-value as the index and the respective y-value. 
 count
-	Participants are counted all together (or per treatment / role / group).
+	Participants are counted altogether (or per treatment/role/group).
 
 
 
@@ -996,7 +996,7 @@ Results bubble
 .. image:: _static/elements/bubble2.png
     :alt:  300p
 
-The bubble chart displays the linkage between to continuous decisions, e.g. amount sent and amount returned. The size of the bubble shows how often the number was chosen. The number in the bubble shows x-value / y-value. If you display by role, group or treatment, bubbles in different colors are displayed. Hovering over the bubble, shows the total number of observations. The graph allows for zooming.
+The bubble chart displays the linkage between two continuous decisions, e.g. amount sent and amount returned. The size of the bubble shows how often the number was chosen. The number in the bubble shows x-value / y-value. If you display by role, group or treatment, bubbles in different colors are displayed. Hovering over the bubble shows the total number of observations. The graph allows for zooming.
 
 .. image:: _static/elements/bubble.png
     :width: 70%
@@ -1004,14 +1004,14 @@ The bubble chart displays the linkage between to continuous decisions, e.g. amou
 variable x-axis and y-axis
 	The variable which should be displayed on the x-axis and y-axis. 
 minimum/maximum/label x-axis
-	Minimum, maximum and label of x-axis
+	Minimum, maximum and label of the x-axis
 minimum/maximum/label y-axis
-	Minimum, maximum and label of y-axis
+	Minimum, maximum and label of the y-axis
 show element
-	Always display element, only if stage is activated or only if it's activated and after.
+	Always display the element, only if the stage is activated or only if it's activated and after.
 
 count
-	Participants are counted all together (or per treatment / role / group).
+	Participants are counted altogether (or per treatment/role/group).
 
 
 
@@ -1024,7 +1024,7 @@ Results counter
 
 The counter enables you to display the relative frequency with which a specific answer was chosen. Hovering over the bars gives the absolute frequency of participants who opted for that option. The counter can be useful if the set of answers is open (e.g. text input). It lists all variable inputs according to their frequency.
 
-.. note:: Using a multiple choice input field will result in the listing of combined answers. E.g. You can select A, B, C (multiple choice). Then the counter element will display how many percent chose A, A&B, A&C,... If you want to have the items analyzed separately (only A, B, C) you should use `Results single / multiple choice questions`_. 
+.. note:: Using a multiple choice input field will result in the listing of combined answers. E.g. You can select A, B, C (multiple choice). Then the counter element will display how many per cent chose A, A&B, A&C,... If you want to have the items analyzed separately (only A, B, C), you should use `Results single/multiple choice questions`_. 
 
 
 .. image:: _static/elements/counter.png
@@ -1033,9 +1033,9 @@ The counter enables you to display the relative frequency with which a specific 
 variable
 	The variable which should be displayed. 
 maximal number
-	This limits the maximal number of answers to be displayed. E.g. if this is set to 10, only the 10 most frequent answers are shown.
+	This limits the maximum number of answers to be displayed. E.g. if this is set to 10, only the 10 most frequent answers are shown.
 show element
-	Always display element, only if stage is activated or only if it's activated and after.
+	Always display the element, only if the stage is activated or only if it's activated and after.
 
 Results game matrix
 --------------------
@@ -1043,7 +1043,7 @@ Results game matrix
 .. image:: _static/elements/matrix2.png    
 	:alt:  300p
 
-The matrix displays the linkage between to discrete decisions. If a game e.g. is played with two different participants, the results can be displayed as a matrix. Or if a participant makes two different decisions the linkage between the two can be shown.
+The matrix displays the linkage between two discrete decisions. If a game, e.g. is played with two different participants, the results can be displayed as a matrix. Or if a participant makes two different decisions, the linkage between the two can be shown.
 
 .. image:: _static/elements/matrix.png
     :width: 70%
@@ -1054,15 +1054,15 @@ decision role 1
 decision role 2
 	The decision for the column participant.
 results matrix
-	Here you can specify the payoffs for each combination. The first value is the row participants, the second value the column participant.
+	Here you can specify the payoffs for each combination. The first value is the row participants, the second value is the column participants.
 show roles
-	This settings determines if the role figure is displayed next to the payoffs in the matrix table.
+	This setting determines if the role figure is displayed next to the payoffs in the matrix table.
 show element
-	Always display element or only if stage is activated.
+	Always display the element, or only if the stage is activated.
 display results
 	Here you can choose if results should be pooled over all rounds or displayed separately for each round.
 count
-	Participants are counted all together (or per treatment / role / group).
+	Participants are counted altogether (or per treatment/role/group).
 
 
 .. note:: The displayed matrix only determines the image on the lecturer’s screen and not the payoff for participants. The payoff is calculated individually for the participants (either through the element `Payoff matrix game`_ or through a subjects program).
@@ -1072,21 +1072,21 @@ Results supply and demand
 
 .. image:: _static/elements/supplydemand.png
 
-This element displays a supply and demand graph. It uses array which are calculated in a globals program to display supply and demand. The graph allows for zooming.
+This element displays a supply and demand graph. It uses arrays, which are calculated in a globals program to display supply and demand. The graph allows for zooming.
 
 .. image:: _static/elements/supplydemand2.png
 	:width: 70%
 
 supply
-	This is the name of the globals variable which contains the supply data. The index of the array is the price and the value of the array is the number of suppliers which are willing to supply at this price. E.g. if you have 2 sellers with seller cost 20 and 4 sellers with seller cost 40, the supply array should be :php:`$supply = array(20=>2, 40=>4);`. Note that the number of sellers is not cumulated across prices. This is automatically done by classEx. If you provide a two dimensional array, you can plot more than one supply line, e.g. :php:`$supply = array(1=>array(20=>2, 40=>4), 2=>array(10=>3, 20=>1));` draws to supply lines.
+	This is the name of the globals variable which contains the supply data. The index of the array is the price, and the value of the array is the number of suppliers which are willing to supply at this price. E.g. if you have 2 sellers with seller cost 20 and 4 sellers with seller cost 40, the supply array should be :php:`$supply = array(20=>2, 40=>4);`. Note that the number of sellers is not cumulative across prices. This is automatically done by classEx. If you provide a two-dimensional array, you can plot more than one supply line, e.g. :php:`$supply = array(1=>array(20=>2, 40=>4), 2=>array(10=>3, 20=>1));` draws two supply lines.
 
 demand
-	This is the name of the globals variable which contains the demand data. The index of the array is the price and the value of the array is the number of demander which are willing to buy at this price. The logic follows the description for supply.
+	This is the name of the globals variable which contains the demand data. The index of the array is the price, and the value of the array is the number of demanders who are willing to buy at this price. The logic follows the description for supply.
 
-label x-axis / y-axis
+label x-axis/y-axis
 	Labels can be provided for both axes.
 count
-	Participants are counted all together (or per treatment / role / group).
+	Participants are counted altogether (or per treatment/role/group).
 
 Results pie chart
 ------------------
@@ -1101,12 +1101,12 @@ The pie chart shows the distribution of discrete choices as a pie chart. Slices 
 variable
 	The name of the variable
 show element
-	Always display element or only if stage is activated.
+	Always display the element, or only if the stage is activated.
 
 count
-	Participants are counted all together (or per treatment / role / group).
+	Participants are counted altogether (or per treatment/role/group).
 
-.. note:: If you provide a numeric input as variable, classEx plots all numeric inputs from the stage in the pie chart. This only makes sense if you ask for percentages (which add up to 100%). For an example see the game Ricardian equivalence in the macroeconomics folder.
+.. note:: If you provide a numeric input as a variable, classEx plots all numeric inputs from the stage in the pie chart. This only makes sense if you ask for percentages (which add up to 100%). For example, see the game Ricardian equivalence in the macroeconomics folder.
 
 
 Results Likert scale
@@ -1114,15 +1114,15 @@ Results Likert scale
 
 .. image:: _static/elements/likert.png
 
-This graphs allows to show data from Likert scales if the input was provided with a `Radioline`_ or `Slider`_. It shows the distribution and provides the mean. The graph allows for zooming. The graph allows for showing multiple variables in one graph.
+This graph allows you to show data from Likert scales if the input was provided with a `Radioline`_ or `Slider`_. It shows the distribution and provides the mean. The graph allows for zooming. The graph allows for showing multiple variables in one graph.
 
 .. image:: _static/elements/likertsetting.png
 	:width: 70%
 
 first variable / last variable
-	Here you can select the variable(s) to be displayed. If you select e.g. variable #1 to #3 from a stage, the graph shows all three variables #1, #2, #3. If you want to show only one variable, just select the same variable for first and last variable.
+	Here you can select the variable(s) to be displayed. If you select, e.g. variable #1 to #3 from a stage, the graph shows all three variables #1, #2, and #3. If you want to show only one variable, just select the same variable for the first and last variable.
 
 count
-	Participants are counted all together (or per treatment / role / group).
+	Participants are counted altogether (or per treatment/role/group).
 
 
