@@ -7,11 +7,11 @@ You can organize your games in the overview mode. Here, you can find all your ow
 .. image:: _static/Overview.PNG
     :alt:  300px
 
-On the left hand side you find the folders for own games (empty at first login) and the folders for ready-made games below it (standard games, quiz & questionnaire,...).
+On the left-hand side, you find the folders for your own games (empty at first login) and the folders for ready-made games below them (standard games, quizzes and questionnaires, etc.).
 
-In the top right-hand corner, you find the main navigation bar which is always displayed in every mode. This allows you to switch from one mode to another and access your personal data.
+In the top right-hand corner, you find the main navigation bar, which is always displayed in every mode. This allows you to switch between modes and access your personal data.
 
-The currently active mode is marked by a darker shade around its symbol |pic_overview|, here the **overview mode**. The left symbol |pic_lecturemode| takes you to the **lecture mode**. The right symbol |pic_editmode| takes you to the **editing mode**. The **drop down menu** (which shows the name of the lecturer and is shaded in black in the figure above) provides access to your personal data and your course data as well as the terms of use, the documentation, some general info on classEx and the log out button.
+The currently active mode is marked by a darker shade around its symbol |pic_overview|, here the **overview mode**. The left symbol |pic_lecturemode| takes you to the **lecture mode**. The right symbol |pic_editmode| takes you to the **editing mode**. The **drop down menu** (which shows the name of the lecturer and is shaded in black in the figure above) provides access to your personal data and your course data, as well as the terms of use, the documentation, some general info on classEx and the logout button.
 
 .. |pic_lecturemode| image:: _static/pic/lectureMode.png
    :width: 15px
@@ -25,7 +25,7 @@ The currently active mode is marked by a darker shade around its symbol |pic_ove
 Settings in the top bar
 ========================
 
-You can see the top bar for the **overview mode** in the picture above in the left hand corner. It offers the following functionality:
+You can see the top bar for the **overview mode** in the picture above in the left-hand corner. It offers the following functionality:
 
 new folder
     Create new folders to organize your games.
@@ -34,20 +34,20 @@ new game
     Create new games which you can design in the editing mode.
 
 repository
-    The repository which provides access to games provided by other lecturers. 
+    The repository, which provides access to games provided by other lecturers. 
 
 
 
 Folders
 =======
 
-Games are sorted into folders, which can be named for example after different chapters of lectures. They can be found on the left. You can create a new folder by clicking on *new folder* in the top bar. Folders can be renamed by clicking on the title of a folder in the main screen (above the list of games). This is not possible for the general folder that is provided by default. Folders are ordered alphabetically. It is not possible to change the order of folders. 
+Games are sorted into folders, which can be named for example, after different chapters of lectures. They can be found on the left. You can create a new folder by clicking on *new folder* in the top bar. Folders can be renamed by clicking on the title of a folder in the main screen (above the list of games). This is not possible for the general folder that is provided by default. Folders are ordered alphabetically. It is not possible to change the order of folders. 
 
-.. note:: If you need a specific order, you may name the folders e.g. 01 - intro, 02 - motivation, ...
+.. note:: If you need a specific order, you may name the folders, e.g. 01 - intro, 02 - motivation, ...
 
 Folders can only be deleted when they are empty. Then the delete symbol |pic_delete| will appear. The deletion cannot be reversed. 
 
-Each account has a standard folder which is called *general folder*. This cannot be deleted.
+Each account has a standard folder, which is called *general folder*. This cannot be deleted.
 
 .. |pic_delete| image:: _static/pic/reject.png
     :width: 15px
@@ -77,9 +77,9 @@ You can move games by clicking on the *move game* icon |pic_handle| and dragging
 Play and edit games
 ====================
 
-If you click on the *play game* button, the game is directly started in the lecture mode.
+If you click on the *play game* button, the game starts directly in the lecture mode.
 
-.. note:: If you click on *play game*, the current game which is running will be stopped and the game you clicked on will be started. If you want to switch back to your currently running game instead use the buttons in the top navigation bar to go the lecture mode or click on the button *back to current game* below the navigation bar.
+.. note:: If you click on *play game*, the current game which is running will be stopped, and the game you clicked on will be started. If you want to switch back to your currently running game instead, use the buttons in the top navigation bar to go the lecture mode or click on the button *back to current game* below the navigation bar.
 
 You can directly enter the editing mode by clicking on the *edit game* icon. The title of this button changes to *view* if you cannot edit the game. This may happen if you are not the owner of the game, but you imported the game (see below). 
 
@@ -90,23 +90,23 @@ You can directly enter the editing mode by clicking on the *edit game* icon. The
 Public, private and imported games
 ==================================
 
-All games are marked as *public* |pic_public|,  *private* |pic_private| or as *created by someone else* |pic_other|. The *public game* icon |pic_public| means that you created the game but other users can see and copy this game. The *private game* |pic_private| icon means your game is private and cannot be seen by other users. You can change the game status between private or public by clicking on the symbol. The *created by someone else* marks the ready-made games provided by classEx and all games you imported from the repository. You cannot edit them but only view and play them. If you want to make your own version of such a game you have to copy it.
+All games are marked as *public* |pic_public|,  *private* |pic_private| or as *created by someone else* |pic_other|. The *public game* icon |pic_public| means that you created the game, but other users can see and copy this game. The *private game* |pic_private| icon means your game is private and cannot be seen by other users. You can change the game status between private and public by clicking on the symbol. The *created by someone else* marks the ready-made games provided by classEx and all games you imported from the repository. You cannot edit them, but only view and play them. If you want to make your own version of such a game, you have to copy it.
 
 Copy and delete games
 ========================
 
-If you want to make a copy of a game (e.g. to create your own version of a ready-made game), click on the copy button |pic_copy|. This will create a copy of the game in your *general folder*. You can edit this copy and thus make your own version of any game on classEx. Alternatively, you can go to the editing mode and click on the drop down menu *game* and then select *copy game*. 
+If you want to make a copy of a game (e.g. to create your own version of a ready-made game), click on the copy button |pic_copy|. This will create a copy of the game in your *general folder*. You can edit this copy and thus make your own version of any game in classEx. Alternatively, you can go to the editing mode and click on the drop-down menu *game* and then select *copy game*. 
 
 The *delete game* icon |pic_delete| deletes a game. This can't be reversed.
 
 Share games
 =============
 
-By clicking on the sharing symbol |pic_share| a sharing link will be created and copied to the clipboard. You can share this link with other users. The other user has to be logged into their classEx account first and then pastes the link. Then a link to the shared game is added to the general folder and the other user can test the game.
+By clicking on the sharing symbol |pic_share|, a sharing link will be created and copied to the clipboard. You can share this link with other users. The other user has to be logged into their classEx account first and then paste the link. Then a link to the shared game is added to the general folder, and the other user can test the game.
 
 .. note:: Only a link to the game is copied to the other user, not the game itself. The game remains in the ownership of the original user. The new user can make a copy of the references game if they want to edit it.
 
-.. note:: You can only share own games.
+.. note:: You can only share your own games.
 
 
 
@@ -131,5 +131,5 @@ Import games
 
 All games from the repository can be imported to one's own account by clicking on the *Import game* button. You can then find the game in the general folder.
 
-.. note:: If you import games, they are not copied to your account. classEx only sets a reference to the game of the other lecturer. Therefore, you cannot modify imported games. In order to modify an imported game you have to copy it.
+.. note:: If you import games, they are not copied to your account. classEx only sets a reference to the game of the other lecturer. Therefore, you cannot modify imported games. In order to modify an imported game, you have to copy it.
 
