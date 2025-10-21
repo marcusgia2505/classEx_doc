@@ -11,24 +11,24 @@ Programming
 .. role:: html2(code)
    :language: html
 
-Programs are a very useful to design dynamic games. Programs are elements of stages and therefore created like any other element (see :ref:`Develop:Define Elements`).
+Programs are very useful for designing dynamic games. Programs are elements of stages and therefore created like any other element (see :ref:`Develop:Define Elements`).
 
 .. image:: _static/program.png
 
-There are two types of programs, subjects and globals. Subjects programs are executed for each participant, global programs are executed once for all participants.
+There are two types of programs: subjects and globals. Subjects programs are executed for each participant, global programs are executed once for all participants.
 
 .. note:: It is always good to comment the code if you try to understand it later. Add comments with :php:`/* comment */` to your program code.
 
 Programming language 
 ====================
 
-Variables and programs are specified via `PHP <https://en.wikipedia.org/wiki/PHP>`_. Currently, we use PHP 7.0. This is a well-documented standard which enables easy programming. Details can be found on the internet, for example `here <http://php.net/docs.php>`_. You can utilize the normal standard PHP functions (e.g. :php:`round(), rand(...), number_format()`,...).
+Variables and programs are specified via `PHP <https://en.wikipedia.org/wiki/PHP>`_. Currently, we use PHP 7.0. This is a well-documented standard which enables easy programming. Details can be found on the internet, for example, `here <http://php.net/docs.php>`_. You can utilize the normal standard PHP functions (e.g. :php:`round(), rand(...), number_format()`,...).
 
-Programs are entered in an editor that comprises syntax-highlighting as well as a simple error check of the entered codes.
+Programs are entered in an editor that comprises syntax-highlighting as well as a simple error check of the entered code.
 
-Furthermore, the editor contains a completion system which will show you all available variables. If you start entering the beginning of a variable ($...) and then press Ctrl+space the automatic completion system will show you all corresponding variables and functions.
+Furthermore, the editor contains a completion system which will show you all available variables. If you start entering the beginning of a variable ($...) and then press Ctrl+space, the automatic completion system will show you all corresponding variables and functions.
 
-.. warning:: You can not declare own PHP functions in classEx.
+.. warning:: You can not declare your own PHP functions in classEx.
 
 
 Declaration of variables
@@ -41,7 +41,7 @@ Variables are defined by starting with :php:`$`. It does not matter whether the 
 	/* numeric variable */
 	$endowment = 10;
 
-	/* string variable with a varialble */
+	/* string variable with a variable */
 	$info = "Your endowment is ".$endowment." Euros.";
 
 	/* array */ 
@@ -57,7 +57,7 @@ There are two different scopes: globals and subjects variables.
 Globals variables are
 
 - available for all participants (can be accessed by subjects program),
-- are calculated at the lecturer side,
+- are calculated at the lecturer's side,
 - are the same for every participant,
 - are calculated first (i.e. before subjects variables).
 
@@ -71,7 +71,7 @@ Subjects variables are
 
 .. note:: Subjects variables are only available to a specific participant. This means if you want to use the decision of one participant in another's screen, you have to use the functions below to retrieve the decision (e.g. from the partner or group member). You can also retrieve decisions as a globals variable (which then are available to all participants) and retrieve the globals variable for a specific participant.
 
-In addition to globals and subjects variables, there is a third table where data is stored in classEx - contracts. Contracts are always concluded between a buyer and a seller and a contract contains a price and a quantity. Some of the functions below help to retrieve contract data. 
+In addition to globals and subjects variables, there is a third table where data is stored in classEx - contracts. Contracts are always concluded between a buyer and a seller, and a contract contains a price and a quantity. Some of the functions below help to retrieve contract data. 
 
 Execution, Synchronization and Lifetime 
 ========================================
@@ -79,7 +79,7 @@ Execution, Synchronization and Lifetime
 Execution
 ~~~~~~~~~
 
-Variables and program code is always executed in a sequential order. This means that elements which come first are executed first. 
+Variables and program code are always executed in a sequential order. This means that elements which come first are executed first. 
 
 The overall order is the following:
 
@@ -87,35 +87,35 @@ The overall order is the following:
 - Second, globals programs are executed (in the order stated for the lecturer screen).
 - Third, subjects programs are executed (in the order stated at the participant screen). Subject programs are executed before other elements are displayed.
 
-Subjects programs offer the option to delay them after the decision has been made. This is provided by the setting *execute only after input*. This means that the subjects program is not executed on the loading of the respective screen, but only after a participant submitted his or her decision. 
+Subjects programs offer the option to delay them after the decision has been made. This is provided by the setting *execute only after input*. This means that the subjects program is not executed on the loading of the respective screen, but only after a participant submits his or her decision. 
 
-.. note:: This feature can be useful if you want to do some calculations with the current input before the next stage has started. You can e.g. add to inputs :php:`$a` and :php:`$b` and safe them as a new variable with :php:`$save('sum',$a+$b)`. Logically, this can only be done, once the inputs are provided. In some cases, it might be useful to have the sum already available in the next stage (e.g. to display the sum in a graph).
+.. note:: This feature can be useful if you want to do some calculations with the current input before the next stage has started. You can, e.g. add to inputs :php:`$a` and :php:`$b` and save them as a new variable with :php:`$save('sum',$a+$b)`. Logically, this can only be done once the inputs are provided. In some cases, it might be useful to have the sum already available in the next stage (e.g. to display the sum in a graph).
 
 Synchronization
 ~~~~~~~~~~~~~~~
 
-It is always important to keep in mind how synchronization works in classEx in order to retrieve variables at the correct moment in time. Within one stages, participants make their decisions (and therefore create their input variables) at any point in time. So you do not know if the value has been set or not. For this reason, you should only retrieve values in the following stage. 
+It is always important to keep in mind how synchronization works in classEx in order to retrieve variables at the correct moment in time. Within one stage, participants make their decisions (and therefore create their input variables) at any point in time. So you do not know if the value has been set or not. For this reason, you should only retrieve values in the following stage. 
 
 E.g. if you want to display the input :php:`$a` of participant A to another participant B, you can only use :php:`$other = $findVariablePartner("a");` in the next stage and not in the current one. It may be the case that A has not made his or her decision while B is trying to retrieve it. The same holds true if you want to display the input :php:`$a` in a result graph or do some calculations with it in a globals program.
 
-One exception is the usage of *execute only after input* in the section `Execution`_. This allows to do some calculations after the input of a participant. Still, keep in mind, that you do not know when this program will be executed as the participant may submit his or her input at any point in time.
+One exception is the usage of *execute only after input* in the section `Execution`_. This allows for some calculations after the input of a participant. Still, keep in mind that you do not know when this program will be executed, as the participant may submit his or her input at any point in time.
 
-Another exception is that you can repeat globals programs every 2 seconds. This can be set by selecting *update every 2 s* next to the program element. Then the program is executed every 2 seconds and calculations are updated. This allows to get input decisions in real time.
+Another exception is that you can repeat globals programs every 2 seconds. This can be set by selecting *update every 2 s* next to the program element. Then the program is executed every 2 seconds, and calculations are updated. This allows for getting input decisions in real time.
 
 Lifetime
 ~~~~~~~~~
 
-Variables and their values can be used after their declaration during the whole game. They can be read (and also overwritten) at any point after their declaration. After the last stage of the game, all subjects variables (which are not decision input or were stored) are deleted. Globals variables are automatically stored.
+Variables and their values can be used after their declaration throughout the whole game. They can be read (and also overwritten) at any point after their declaration. After the last stage of the game, all subjects variables (which are not decision inputs or were stored) are deleted. Globals variables are automatically stored.
 
-Subjects values can only be changed by subjects programs and globals values only by globals programs.
+Subjects values can only be changed by subjects programs, and globals values only by globals programs.
 
-If you e.g. set :php:`$a=1;` in stage 1 (as a globals variable), you can use this value in all stages after stage 1 as well. Keep in mind that for subjects variables this only holds true for the participant's own variables.
+If you e.g. set :php:`$a=1;` in stage 1 (as a globals variable), you can use this value in all stages after stage 1 as well. Keep in mind that for subjects variables, this only holds true for the participant's own variables.
 
 
 Description of functions in the documentation
 ==============================================
 
-Functions are described in the following way. It follows the standard way of documentation of functions. Let's take the following example:
+Functions are described in the following way. It follows the standard way of documenting functions. Let's take the following example:
 
 .. code:: php
 
@@ -125,18 +125,18 @@ Functions are described in the following way. It follows the standard way of doc
 Function name
  	The name of the function is *$findVariablePartner*. 
 
-	.. note:: Notice that in contrast to standard PHP function, internal functions in classEx always start with a $ sign. 
+	.. note:: Notice that in contrast to standard PHP functions, internal functions in classEx always start with a $ sign. 
 
 Arguments
-	A function has arguments which are the values the function is called with. In this case, the function has four arguments. The first argument is mandatory, the other three arguments are optional. Arguments can be strings, numbers or variables.
+	A function has arguments, which are the values the function is called with. In this case, the function has four arguments. The first argument is mandatory; the other three arguments are optional. Arguments can be strings, numbers or variables.
 
 Arguments without default value (mandatory)
 	Arguments which are **not** marked with a :php:`=` sign and a default value are *mandatory*. This means you have to specify them in order to make the function work. In the example, you have to specify the variable name :php:`'varname'`. The quotes indicate that you have to specify it as a string. 
 
-	.. note:: Note that variables names in functions are specified without the $ sign.
+	.. note:: Note that variable names in functions are specified without the $ sign.
 
 Arguments with default value (optional)
-	All the other arguments in the function have default values which means that they are optional. You can specify the function with only one parameter as well. The values after the :php:`=` sign are taken as default. In the example, the variable :php:`$currentRound` (which is available as pre-defined global variable) is taken as default for the round. If you want to use a different round, you have to overwrite the default value. The same holds true for the other arguments. :php:`$partnerRole` and :php:`$no_decision` are set to :php:`null` as a default, where :php:`null` means no value.
+	All the other arguments in the function have default values, which means that they are optional. You can specify the function with only one parameter as well. The values after the :php:`=` sign are taken as default. In the example, the variable :php:`$currentRound` (which is available as a pre-defined globals variable) is taken as the default for the round. If you want to use a different round, you have to overwrite the default value. The same holds true for the other arguments. :php:`$partnerRole` and :php:`$no_decision` are set to :php:`null` as a default, where :php:`null` means no value.
 
 	Here are some examples:
 
@@ -151,11 +151,11 @@ Arguments with default value (optional)
 	/* This gives the value of the current round for partner role 2. */
 	$findVariablePartner('varname', $round, 2);
 
-	/* This gives the value of the current round and return 0 in case of no decision. ($partnerRole is set to its default.) */
+	/* This gives the value of the current round and returns 0 in case of no decision. ($partnerRole is set to its default.) */
 	$findVariablePartner('varname', $round, null, 0);
 
 
-.. note:: If you want to change some of the default values in arguments at the end of the function, you also have to specify the arguments before the argument you want to change. You can see this in the last code example where we want to leave :php:`$partnerRole` on its default value and only change :php:`$no_decision`.
+.. note:: If you want to change some of the default values in arguments at the end of the function, you also have to specify the arguments before the argument you want to change. You can see this in the last code example, where we want to leave :php:`$partnerRole` on its default value and only change :php:`$no_decision`.
 
 
 Internally used variable names
@@ -204,9 +204,9 @@ The following functions can be used to retrieve subjects variables.
 
 	**Function** retrieves the variable from another participant in the same group. The function makes sure that participants always get feedback, which can be important in order to avoid disappointing participants. Certainly, cloned or random observations may have to be deleted prior to using data for research. 
 
-	**Returns** variable of the other participants. In case the other has not made a decision, it tries to clone a decision from a different participant which has the respective role but is in a different group. If :php:`$no_decision` is specified, the function returns the value of  :php:`$no_decision` if no value is available. In this case, the function does not look for a cloned decision.
+	**Returns** variable of the other participants. In case the other has not made a decision, it tries to clone a decision from a different participant who has the respective role but is in a different group. If :php:`$no_decision` is specified, the function returns the value of :php:`$no_decision` if no value is available. In this case, the function does not look for a cloned decision.
 
-	.. note:: The function may retrieve a value if the other participant submitted an empty form. In this case the value is an empty string :php:`""` or :php:`null`.
+	.. note:: The function may retrieve a value if the other participant submitted an empty form. In this case, the value is an empty string :php:`""` or :php:`null`.
 
 	**Arguments** are:
 
@@ -251,7 +251,7 @@ The following functions can be used to retrieve subjects variables.
 
 :php:`$findGroupFreq('varname',  $roundselected = $round, $includingOwn = false)`
 
-	**Function** retrieves the frequency of each value of a variable for the own group. 
+	**Function** retrieves the frequency of each value of a variable for its own group. 
 
 	**Returns** an array with the value as index and the frequency as value. E.g. :php:`$returnedValue = array(1=>12, 2=>13)` would indicate that the value 1 was chosen 12 times, and the value 2 was chosen 13 times. If no decisions were made, an empty array is returned.
 
@@ -332,7 +332,7 @@ Here you can find some coding examples:
 Function to save variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you want to retrieve variables, those variables have to be stored before. For decision inputs this happens automatically. If you want to retrieve variables defined or used in the subjects program, you have to save them before by using the following function:
+If you want to retrieve variables, those variables have to be stored beforehand. For decision inputs, this happens automatically. If you want to retrieve variables defined or used in the subjects program, you have to save them beforehand by using the following function:
 
 :php:`$save('varname', $value, $roundselected = $round);`
 
@@ -344,7 +344,7 @@ If you want to retrieve variables, those variables have to be stored before. For
 
 	-  :php:`'varname'` the variable name (mandatory).
 	-  :php:`$value` the value to be stored. The value can also be a variable itself.
-	-  :php:`$roundselected` the values are saved for a certain round. If you e.g. calculate a result in round 6 according to inputs made in round 5, you can enter $round = $currentRound-1 in order to save the result in the round it belongs to.
+	-  :php:`$roundselected` the values are saved for a certain round. If you, e.g. calculate a result in round 6 according to inputs made in round 5, you can enter $round = $currentRound-1 in order to save the result in the round it belongs to.
 	
 
 Here you can find some coding examples:
@@ -364,7 +364,7 @@ Here you can find some coding examples:
 Function to change role or group ID
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-It is possible to change the role or group ID of a subject. This enables you to create your own matching algorithms and assign new groups to your subjects. Treatments however cannot be changed this way.
+It is possible to change the role or group ID of a subject. This enables you to create your own matching algorithms and assign new groups to your subjects. Treatments however, cannot be changed this way.
 
 :php:`$resetGroupNr($value);`
 
@@ -374,7 +374,7 @@ It is possible to change the role or group ID of a subject. This enables you to 
 
 	**Arguments** are:
 
-	-  :php:`$value` the new group ID for the subjects. The value can also be a variable itself or an array. Usually the most convenient way is to create a matching algorithm in a globals program code returning an array (e.g. called $any_array_name) with participants IDs as keys and the new group IDs as values. The code for the reset-function could then be :php:`$resetGroupNr($any_array_name[$id]);`
+	-  :php:`$value` the new group ID for the subjects. The value can also be a variable itself or an array. Usually, the most convenient way is to create a matching algorithm in a globals program code returning an array (e.g. called $any_array_name) with participants' IDs as keys and the new group IDs as values. The code for the reset-function could then be :php:`$resetGroupNr($any_array_name[$id]);`
 	
 :php:`$resetRole($value);`
 
@@ -387,7 +387,7 @@ It is possible to change the role or group ID of a subject. This enables you to 
 	-  :php:`$value` the new role for the subject. 
 	
 	
-..note:: Both functions change the $role or $group variable of the respective player and are also change the table containing all the matches. 
+..note:: Both functions change the $role or $group variable of the respective player and also change the table containing all the matches. 
 
 
 Variables for lecturers (globals)
@@ -451,7 +451,7 @@ The following functions can be used to retrieve globals variables.
 
 	-  :php:`varname` the variable name (mandatory). The function can retrieve subjects variables which were saved before or which were decision inputs.
 	-  :php:`$roundselected` the round from which the variable should be retrieved. 
-	-  :php:`$multiple` If multiple is set to true, answers from multiple choice questions are decomposed into single answers.
+	-  :php:`$multiple` If multiple is set to true, answers from multiple-choice questions are decomposed into single answers.
 
 ----
 
@@ -476,7 +476,7 @@ The following functions can be used to retrieve globals variables.
 
 	**Arguments** are:
 
-	-  :php:`array` an array with data (mandatory). The function needs an array with data (this can be e.g. retrieved with the getValues function).
+	-  :php:`array` an array with data (mandatory). The function needs an array with data (this can be, e.g. retrieved with the getValues function).
 	
 
 ----
@@ -626,7 +626,7 @@ The following functions can be used to retrieve globals variables.
 
 	**Function** retrieves corresponding subject IDs to participant IDs.
 
-	**Returns** an array with the internal participant ID as index and the respective subjectID. With no participants it returns an empty array.
+	**Returns** an array with the internal participant ID as index and the respective subject ID. With no participants, it returns an empty array.
 	
 ----
 
@@ -659,7 +659,7 @@ The following functions can be used to retrieve globals variables.
 
 	The amount is set directly by the participant in the :ref:`Elements:Winner's notification`.
 
-.. note:: If the winner is drawn by an own program code this code has to be placed before the start button of the stage.
+.. note:: If the winner is drawn by an own program code, this code has to be placed before the start button of the stage.
 ----
 
 :php:`$getAvgPriceContract($roundselected = $currentRound, $status = 1)`
@@ -693,7 +693,7 @@ The following functions can be used to retrieve globals variables.
 
 	**Function** retrieves prices per seller of buyer.
 
-	**Returns** an array with the internal participant ID as index and the prices of each seller or buyer. With no data, an empty array is returned. If a seller or buyer concluded multiple contracts the sum of prices is returned.
+	**Returns** an array with the internal participant ID as index and the prices of each seller or buyer. With no data, an empty array is returned. If a seller or buyer concluded multiple contracts, the sum of prices is returned.
 
 	**Arguments** are:
 
@@ -707,7 +707,7 @@ The following functions can be used to retrieve globals variables.
 
 	**Function** retrieves quantities per seller of buyer.
 
-	**Returns** an array with the internal participant ID as index and the quantities of each seller or buyer. With no data, an empty array is returned. If a seller or buyer concluded multiple contracts the sum of quantities is returned.
+	**Returns** an array with the internal participant ID as index and the quantities of each seller or buyer. With no data, an empty array is returned. If a seller or buyer concluded multiple contracts, the sum of quantities is returned.
 
 	**Arguments** are:
 
@@ -721,11 +721,11 @@ The following functions can be used to retrieve globals variables.
 Diagnosis tool
 ==============
 
-Small errors can cause the programs not to run. Therefore, error detection is an important issue. First, have a look in the editor which provides a basic syntax checking. Errors are marked by red crosses. If the program is running but not performing in the expected way, you may use the diagnosis tool to find the error.
+Small errors can cause the programs not to run. Therefore, error detection is an important issue. First, have a look at the editor, which provides basic syntax checking. Errors are marked by red crosses. If the program is running but not performing in the expected way, you may use the diagnosis tool to find the error.
 
-With severe errors the lecture mode can not be started. In order to find the error go through the code and look for errors. Check if the function names are correctly spelled.
+With severe errors, the lecture mode can not be started. In order to find the error, go through the code and look for errors. Check if the function names are correctly spelt.
 
-The diagnosis tool is very useful for trouble shooting and testing your game. You can access the diagnosis tool by clicking on the stethoscope icon in the top bar of the lecture mode.
+The diagnosis tool is very useful for troubleshooting and testing your game. You can access the diagnosis tool by clicking on the stethoscope icon in the top bar of the lecture mode.
 
 .. image:: _static/Diagnosissteto.PNG
     :alt:  300p
@@ -740,25 +740,25 @@ The different tabs allow you to access the globals or the variables for each par
 Javascript
 ==========
 
-Programming in classEx is normally done in PHP. For some applications it may be useful to also use some javascript. Javascript runs on the client side (i.e. on the participant's browser) and also for interactive change of content (with no need to reload the page).
+Programming in classEx is normally done in PHP. For some applications, it may be useful to also use some JavaScript. Javascript runs on the client side (i.e. on the participant's browser) and also for interactive change of content (with no need to reload the page).
 
-For this reason, you can also add some javascript code by adding a Javascript element. An additional option is to put javascript code directly in the text box encapsulated by :php:`<script></script>`. You can also use jQuery which is loaded automatically for each page.
+For this reason, you can also add some JavaScript code by adding a JavaScript element. An additional option is to put JavaScript code directly in the text box encapsulated by :php:`<script></script>`. You can also use jQuery, which is loaded automatically for each page.
 
 Manipulation of HTML elements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-All elements in classEx have their own identifiers so that they can be used for javascript interaction. 
+All elements in classEx have their own identifiers so that they can be used for JavaScript interaction. 
 
-Input fields have the identifier "fieldX", where X is the number of the input field (#1, #2,...). An example would be :html2:`<input type="hidden" id="field1" name="bid1" value="">`. If you want to do some javascript interaction, you can manipulate the value of the input field e.g. with :java:`$("#field1").val(1);`. Then the value is set to 1. 
+Input fields have the identifier "fieldX", where X is the number of the input field (#1, #2,...). An example would be :html2:`<input type="hidden" id="field1" name="bid1" value="">`. If you want to do some JavaScript interaction, you can manipulate the value of the input field, e.g. with :java:`$("#field1").val(1);`. Then the value is set to 1. 
 
 Buttons have the identifier "buttonX" where X is the number of the stage. The number of the stage can be found by hovering over the tabs in the editing mode. This allows you to add click events to the standard button, e.g. :java:`$("#button1234").click(...)`. 
 
-You can also define your own parts in the text boxes which can be manipulated with javascript. E.g. define :html2:`<span id="text1">This is my text</span>` in the text box. Then you can change this text in a javascript program with :java:`$("#text1").html("This is my new text.");`. 
+You can also define your own parts in the text boxes, which can be manipulated with JavaScript. E.g. define :html2:`<span id="text1">This is my text</span>` in the text box. Then you can change this text in a JavaScript program with :java:`$("#text1").html("This is my new text.");`. 
 
 Live feedback on input
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Javascript allows e.g. for live feedback when subjects enter numbers. Let's take an ultimatum game where a participant can split 10 Euros between him- or herself and another participant. The participant enters the amount to send to the other in the input field #1. With javascript you can display, the amount he or she keeps in real time. Each time the participant changes his input, he or she gets live feedback on the amount he or she keeps. 
+JavaScript allows, e.g. for live feedback when subjects enter numbers. Let's take an ultimatum game where a participant can split 10 Euros between him or herself and another participant. The participant enters the amount to send to the other in the input field #1. With JavaScript, you can display the amount he or she keeps in real time. Each time the participant changes his input, he or she gets live feedback on the amount he or she keeps. 
 
 Just add a text box with the following code. 
 
@@ -766,12 +766,12 @@ Just add a text box with the following code.
 
 	The amount you keep is <span id="keep">--</span>.
 
-Then add a little javascript program which is executed when you change the input field.
+Then add a little JavaScript program which is executed when you change the input field.
 
 .. code:: javascript
 
 	$("#field1").keyup(function() {
-		/* javascript takes the input as string which has to be parsed to Integer or Float to 
+		/* JavaScript takes the input as a string, which has to be parsed toan  Integer or Float to 
 			make calculations with */
   		let send = parseInt($(this).val());
   		let keep = 10 - send;
@@ -780,12 +780,12 @@ Then add a little javascript program which is executed when you change the input
 
 
 
-Alternatively, you can also add another input field which is marked with *output only*. E.g. you added such an input field as input field #2. Then you do not have to add the text box, but only the javascript program with: 
+Alternatively, you can also add another input field, which is marked with *output only*. E.g. you added such an input field as input field #2. Then you do not have to add the text box, but only the JavaScript program with: 
 
 .. code:: javascript
 
 	$("#field1").keyup(function() {
-		/* javascript takes the input as string which has to be parsed to Integer or Float to 
+		/* JavaScript takes the input as a string, which has to be parsed to an Integer or Float to 
 			make calculations with */
   		let send = parseInt($(this).val());
   		let keep = 10 - send;
@@ -794,18 +794,18 @@ Alternatively, you can also add another input field which is marked with *output
 
 Note that for input fields you have to use :java:`$("#field2").val(keep)` instead of :java:`$("#keep").html(keep)` for changing HTML.
 
-If you want to add live feedback for sliders, radiolines or buttons you have to use :java:`$("#field1").change(...)` instead of :java:`$("#field1").keyup(...)` for fields where you type the input. 
+If you want to add live feedback for sliders, radiolines or buttons, you have to use :java:`$("#field1").change(...)` instead of :java:`$("#field1").keyup(...)` for fields where you type the input. 
 
 Reading PHP variables
 ~~~~~~~~~~~~~~~~~~~~~
 
-As all variables are only stored in PHP, you need to get the values for the javascript programs by hand. 
+As all variables are only stored in PHP, you need to get the values for the JavaScript programs by hand. 
 
-To read PHP variables one currently needs a two step approach:
-	* write PHP variable in a (hidden) text field
-	* parse text field content in javascript 
+To read PHP variables, one currently needs a two-step approach:
+	* write a PHP variable in a (hidden) text field
+	* parse text field content in JavaScript 
 
-Assume we have a PHP variable :php:`$foo` that contains a value we want to use in javascript.
+Assume we have a PHP variable :php:`$foo` that contains a value we want to use in JavaScript.
 
 Then you should add a text box with:
 
@@ -813,23 +813,23 @@ Then you should add a text box with:
 	
 	<span id="php_var_foo" style="display: none;">$foo;</span>
 
-The id does not need to have this format, but it must be unique.
+The ID does not need to have this format, but it must be unique.
 
-In javascript you can retrieve the variable with:
+In JavaScript, you can retrieve the variable with:
 
 .. code:: javascript
 
 	let foo = JSON.parse($('#php_var_foo').html());
 	
-This command finds the HTML element with the id of the span containing the variable content. It's inner HTML (the content) is taken. Now the variable :java:`foo` in javascript contains the content of the PHP variable :php:`$foo`.
+This command finds the HTML element with the id of the span containing the variable content. Its inner HTML (the content) is taken. Now the variable :java:`foo` in JavaScript contains the content of the PHP variable :php:`$foo`.
 
 Writing PHP variables
 ~~~~~~~~~~~~~~~~~~~~~
 
-This can be achieved via hidden input fields that are filled with javascript. Just add a :ref:`Elements:Hidden field` in your input element.
+This can be achieved via hidden input fields that are filled with JavaScript. Just add a :ref:`Elements:Hidden field` in your input element.
 
-Input fields have the identifier "fieldX", where X is the number of the input field (#1, #2,...). An example would be :html2:`<input type="hidden" id="field1" name="bid1" value="">`. If you want too save a javascript value, you write the value into the input field e.g. with :java:`$("#field1").val(1);`. Then the value is set to 1 and it is stored automatically when the participants submit the input element. 
+Input fields have the identifier "fieldX", where X is the number of the input field (#1, #2,...). An example would be :html2:`<input type="hidden" id="field1" name="bid1" value="">`. If you want to save a JavaScript value, you write the value into the input field, e.g. with :java:`$("#field1").val(1);`. Then the value is set to 1 and it is stored automatically when the participants submit the input element. 
 
-.. note:: At the moment PHP and javascript are not integrated so that variables have to be transferred manually from PHP to javascript and vice versa. In one of the next versions of classEx this should be automatized.
+.. note:: At the moment, PHP and JavaScript are not integrated, so that variables have to be transferred manually from PHP to JavaScript and vice versa. In one of the next versions of classEx, this should be automatized.
 
-.. note:: In the lecture mode, you can use the Javascript function :java:`setGlobalVar(varName, value)` to store variables to the global variables. 
+.. note:: In the lecture mode, you can use the JavaScript function :java:`setGlobalVar(varName, value)` to store variables in the global variables. 
